@@ -38,7 +38,7 @@ achievable by an internally stabilizing state-feedback controller $\tf K$.
 \end{array}
 \label{eq:lti-realization}
 \end{equation}
-is internally stabilizing and achieves the desired response \eqref{eq:lti-response}.
+defines the control law $\uu = \Phiu\Phix^{-1}\x$, is internally stabilizing, and achieves the desired response \eqref{eq:lti-response}.
 \end{enumerate}
 \end{theorem}
 
@@ -58,7 +58,7 @@ If $(I-\D)^{-1}$ exists as on operator in $\RLinf$, then the controller implemen
 \end{equation}
 on the LTI system \eqref{eq:lti-dynamics}, and is internally stabilizing if and only if $(I-\D)^{-1} \in \RHinf$.
 \end{theorem}
-This parameterization has proved crucial in providing tractable approximations to non-convex distributed control problems \cite{matni2017scalable}, and in providing sub-optimality bounds for robust controllers as applied to learned systems \cite{dean2017sample,dean2019safely}.  However, in these past works, very crude approximations based solely on small gain bounds and triangle inequalities were used to control the effects of the uncertain map $(I-\D)^{-1}$ on system stability and performance.  In this work we show that Theorems \ref{thm:lti-sls} and \ref{thm:lti-robust} can be extended to a more general setting that subsequently allows us to make connections to well developed theory in the robust control literature \cite{khammash1990stability,dahleh1994control}.  Although we focus on $\mathcal{L}_1$ optimal control in this paper due to its favorable separability structure (cf. \S \ref{sec:discussion}), we expect analogous results to carry over naturally in the $\mathcal{H}_\infty$ setting.
+This parameterization has proved crucial in providing tractable approximations to non-convex distributed control problems \cite{matni2017scalable}, and in providing sub-optimality bounds for robust controllers as applied to learned systems \cite{dean2017sample,dean2019safely}.  However, in these past works, very crude approximations based solely on small gain bounds and triangle inequalities were used to control the effects of the uncertain map $(I-\D)^{-1}$ on system stability and performance.  In this work we show that Theorems \ref{thm:lti-sls} and \ref{thm:lti-robust} can be extended to a more general setting that subsequently allows us to make connections to well developed theory in the robust control literature \cite{khammash1990stability,dahleh1994control}.  Although we focus on $\mathcal{L}_1$ optimal control in this paper due to its favorable separability structure (cf. \S \ref{sec:extensions}), we expect these results to carry over naturally to the $\mathcal{H}_\infty$ setting.
 
 \subsection{Necessary Conditions}
 Here we characterize a set of affine constraints that the closed loop system responses of system \eqref{eq:dynamics} must satisfy if they are induced by a linear and causal controller $\tf K : \ell_\infty^{n,e} \to \ell_\infty^{p,e}$ via the control law $\tf u = \tf K \tf x$.
@@ -89,6 +89,12 @@ which is clearly equivalent to \eqref{eq:lti-achievable}.
 \end{remark}
 
 \subsection{Controller Implementation}
+\begin{figure}
+\centering
+\includegraphics[width=.4\textwidth]{interconnect}
+\caption{The proposed state-feedback controller structure defined by equations \eqref{eq:realization}.}
+\label{fig:realization}
+\end{figure}
 We now show how to construct an internally stabilizing controller from any operators $\left \{\Phix,\Phiu\right\}$ satisfying constraint \eqref{eq:osls-achievable} that achieves the desired response from $\tf w \to (\tf x, \tf u)$.
 \begin{proposition}\label{prop:sufficiency}
 Let $\left\{\Phix,\Phiu\right\}$ satisfy constraint \eqref{eq:osls-achievable}.  Then the controller implementation shown in Fig. \ref{fig:realization}, described by the equations

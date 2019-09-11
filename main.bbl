@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -20,6 +20,13 @@ M.~A. Dahleh and I.~J. Diaz-Bobillo.
 S.~Dean, H.~Mania, N.~Matni, B.~Recht, and S.~Tu.
 \newblock On the sample complexity of the linear quadratic regulator.
 \newblock \emph{arXiv preprint arXiv:1710.01688}, 2017.
+
+\bibitem[Dean et~al.(2018)Dean, Mania, Matni, Recht, and Tu]{dean2018regret}
+S.~Dean, H.~Mania, N.~Matni, B.~Recht, and S.~Tu.
+\newblock Regret bounds for robust adaptive control of the linear quadratic
+  regulator.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  4188--4197, 2018.
 
 \bibitem[Dean et~al.(2019)Dean, Tu, Matni, and Recht]{dean2019safely}
 S.~Dean, S.~Tu, N.~Matni, and B.~Recht.

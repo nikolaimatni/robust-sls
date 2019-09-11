@@ -56,6 +56,7 @@
 \newcommand{\Phiuh}{\hat{\tf \Phi}_u}
 \newcommand{\Phix}{\tf\Phi_x}
 \newcommand{\Phiu}{\tf\Phi_u}
+\newcommand{\Phih}{\hat{\tf \Phi}}
 \newcommand{\Dh}{\hat{\tf{\Delta}}}
 \newcommand{\D}{{\tf{\Delta}}}
 \newcommand{\DA}{\D_{\A}}
@@ -66,6 +67,7 @@
 \newcommand{\A}{\tf A}
 \newcommand{\B}{\tf B}
 \newcommand{\K}{\tf K}
+\newcommand{\Q}{\tf Q}
 \newcommand{\x}{\tf x}
 \newcommand{\xhat}{\tf{\hat x}}
 \newcommand{\uu}{\tf u}
@@ -103,7 +105,7 @@
 \newcommand{\C}{\ensuremath{\mathbb{C}}}
 \newcommand{\Bcal}{\ensuremath{\mathcal{B}}}
 \newcommand{\G}{\ensuremath{\mathcal{G}}}
-\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+
 \newcommand{\N}{\ensuremath{\mathbb{N}}}
 \newcommand{\F}{\ensuremath{\mathcal{F}}}
 \newcommand{\I}{\ensuremath{\mathcal{I}}}
@@ -159,7 +161,7 @@
 \newcommand{\infnorm}[1]{\left\|#1\right\|_{\infty}}
 \newcommand{\linfnorm}[1]{\left\|#1\right\|_{\ell_\infty}}
 \newcommand{\LTV}{\mathcal{L}_{\mathrm{TV}}}
-\newcommand{\LTI}{\mathcal{L}_{\mathrm{TV}}}
+\newcommand{\LTI}{\mathcal{L}_{\mathrm{TI}}}
 \newcommand{\linffnorm}[1]{\left\|#1\right\|_{\ell_\infty\to\ell_\infty}}
 \newcommand{\Sp}{\tf S_+}
 \newcommand{\Sm}{\tf S_-}
@@ -182,20 +184,25 @@ University of Pennsylvania}
 \begin{document}
 \maketitle
 \begin{abstract}
-We generalize the system level parameterization of achievable closed loop responses to systems defined by bounded causal linear operators, and use this parameterization to make connections between robust system level synthesis and classical results from the robust control literature.  In particular, by leveraging results from $\mathcal{L}_1$ robust control, we show that necessary and sufficient conditions for robust performance with respect to causal bounded linear uncertainty in the system dynamics can be translated into convex constraints on the system responses.  We exploit this connection to show that these conditions naturally allow the incorporation of delay, sparsity, and locality constraints on the system responses and resulting controller implementation, allowing these methods to be applied to large-scale distributed control problems -- to the best of our knowledge, these are the first robust performance guarantees for distributed control systems.  We also show that for suitably small model uncertainty, sub-optimality bounds on robust performance, as measured with respect to performance achieved by an optimal controller for the true model, can be obtained as a function of the size of the model uncertainty, thus providing a natural bridge between tools from robust control and finite-data guarantees for system identification.
+We generalize the system level synthesis framework to systems defined by bounded causal linear operators, and use this parameterization to make connections between robust system level synthesis and classical results from the robust control literature.  In particular, by leveraging results from $\mathcal{L}_1$ robust control, we show that necessary and sufficient conditions for robust performance with respect to causal bounded linear uncertainty in the system dynamics can be translated into convex constraints on the system responses.  We exploit this connection to show that these conditions naturally allow for the incorporation of delay, sparsity, and locality constraints on the system responses and resulting controller implementation, allowing these methods to be applied to large-scale distributed control problems -- to the best of our knowledge, these are the first such robust performance guarantees for distributed control systems.  %We also show that for suitably small model uncertainty, sub-optimality bounds on robust performance, as measured with respect to performance achieved by an optimal controller for the true model, can be obtained as a function of the size of the model uncertainty, thus providing a natural bridge between tools from robust control and finite-data guarantees for system identification.
 \end{abstract}
 
 \section{Introduction}
 TODO
 
 \section{Notation}
+\label{sec:notation}
 \input{notation}
 
 \section{Operator System Level Parameterization}
+\label{sec:operator}
 \input{op-sls}
 
 \section{Robust Performance under Model Uncertainty}
+\label{sec:robust-perf}
 \input{performance}
+
+\input{extensions}
 
 \begin{small}
 \bibliographystyle{abbrvnat}  

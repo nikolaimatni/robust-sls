@@ -1,0 +1,19 @@
+%!TEX root = main.tex
+%In this section, we discuss to extensions to the robust performance results presented in the previous section.
+
+\subsection{Robust Performance Guarantees for Large-Scale Distributed Control}
+\label{sec:extensions}
+In previous work \cite{wang2014localized,wang2016localized,wang2018separable}, the author and his colleagues showed that for LTI dynamical systems \eqref{eq:lti-dynamics} defined by structured (i.e., sparse) matrices $(A,B)$, imposing \emph{locality constraints} on the system responses $\{\Phix,\Phiu\}$, i.e., imposing that $\{\Phix,\Phiu\} \in \mathcal{S}$, for $\mathcal{S}$ a suitably defined structure inducing subspace constraint, led to distributed controllers that enjoyed scalable synthesis and implementation complexity.  Although formally defining these concepts is beyond the scope of this paper, we note that such conditions can be easily enforced on the solution of the robust performance conditions \eqref{eq:constraints} by additionally imposing that $\{\Phixh,\Phiuh\}\in\mathcal{S}$.   The resulting problem satisfies a notion of \emph{partial separability}, c.f. \S IV of \cite{wang2018separable}, which allows for the problem to be solved at scale using distributed optimization techniques.  To the best of our knowledge, this is the first such robust performance guarantee that is applicable to large-scale distributed systems.
+
+We emphasize that the conditions identified in \eqref{eq:constraints} remain necessary and sufficient when additional structure is imposed on the system responses $\{\Phixh,\Phiuh\}$ so long as the dynamic perturbations $(\DA,\DB)$ remain unstructured.  An exciting direction for future work will be to explore the interplay between locality in the closed loop responses and its consequences on necessary and sufficient conditions for robust performance when the perturbations $(\DA,\DB)$ are constrained to respect the topology of the nominal system, as defined by the support of $(\hat A, \hat B)$.
+%
+%\subsection{Sub-Optimality Guarantees for Robust Control}
+%In \cite{dean2017sample}, it was shown\footnote{The result in \cite{dean2018sample} is for a robust $\mathcal{H}_2$ problem, but the derivation goes through nearly as is for $\mathcal{L}_1$ problem considered here.} that an upper bound to the robust performance problem considered here can be computed by solving
+%\begin{equation}
+%\begin{array}{rl}
+%\min_{\tau \in [0,1)}&\frac{1}{1-\tau}\min_{\Phix,\Phiu}\linffnorm{\begin{bmatrix} C & D \end{bmatrix} \begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix}} \\
+%\text{subject to} & \begin{bmatrix} zI-\hat A & - \hat B \end{bmatrix}\begin{bmatrix}\Phixh \\ \Phiuh \end{bmatrix} = I, \ \linffnorm{\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix}} \leq \frac{\tau}{\epsilon}, \\
+%&\Phixh, \Phiuh \in \frac{1}{z}\RHinf,
+%\end{array}
+%\end{equation}
+%and further, it was shown that $\epsilon$ is such that $\epsilon(1+\linffnorm{\K_\star})\linffnorm{(zI-(A+B\K_\star))^{-1}}\leq 1/5$, for $\K_\star$ the optimal co
