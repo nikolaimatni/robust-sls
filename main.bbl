@@ -1,0 +1,67 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Anderson et~al.(2019)Anderson, Doyle, Low, and
+  Matni]{anderson2019system}
+J.~Anderson, J.~C. Doyle, S.~H. Low, and N.~Matni.
+\newblock System level synthesis.
+\newblock \emph{Annual Reviews in Control}, 2019.
+
+\bibitem[Dahleh and Diaz-Bobillo(1994)]{dahleh1994control}
+M.~A. Dahleh and I.~J. Diaz-Bobillo.
+\newblock \emph{Control of uncertain systems: a linear programming approach}.
+\newblock Prentice-Hall, Inc., 1994.
+
+\bibitem[Dean et~al.(2017)Dean, Mania, Matni, Recht, and Tu]{dean2017sample}
+S.~Dean, H.~Mania, N.~Matni, B.~Recht, and S.~Tu.
+\newblock On the sample complexity of the linear quadratic regulator.
+\newblock \emph{arXiv preprint arXiv:1710.01688}, 2017.
+
+\bibitem[Dean et~al.(2019)Dean, Tu, Matni, and Recht]{dean2019safely}
+S.~Dean, S.~Tu, N.~Matni, and B.~Recht.
+\newblock Safely learning to control the constrained linear quadratic
+  regulator.
+\newblock In \emph{2019 American Control Conference (ACC)}, pages 5582--5588.
+  IEEE, 2019.
+
+\bibitem[Khammash(1990)]{khammash1990stability}
+M.~H. Khammash.
+\newblock \emph{Stability and performance robustness of discrete-time systems
+  with structured uncertainty}.
+\newblock PhD thesis, Rice University, 1990.
+
+\bibitem[Matni et~al.(2017)Matni, Wang, and Anderson]{matni2017scalable}
+N.~Matni, Y.-S. Wang, and J.~Anderson.
+\newblock Scalable system level synthesis for virtually localizable systems.
+\newblock In \emph{2017 IEEE 56th Annual Conference on Decision and Control
+  (CDC)}, pages 3473--3480. IEEE, 2017.
+
+\bibitem[Wang and Matni(2016)]{wang2016localized}
+Y.-S. Wang and N.~Matni.
+\newblock Localized lqg optimal control for large-scale systems.
+\newblock In \emph{2016 American Control Conference (ACC)}, pages 1954--1961.
+  IEEE, 2016.
+
+\bibitem[Wang et~al.(2014)Wang, Matni, and Doyle]{wang2014localized}
+Y.-S. Wang, N.~Matni, and J.~C. Doyle.
+\newblock Localized lqr optimal control.
+\newblock In \emph{53rd IEEE Conference on Decision and Control}, pages
+  1661--1668. IEEE, 2014.
+
+\bibitem[Wang et~al.(2018)Wang, Matni, and Doyle]{wang2018separable}
+Y.-S. Wang, N.~Matni, and J.~C. Doyle.
+\newblock Separable and localized system-level synthesis for large-scale
+  systems.
+\newblock \emph{IEEE Transactions on Automatic Control}, 63\penalty0
+  (12):\penalty0 4234--4249, 2018.
+
+\bibitem[Wang et~al.(2019)Wang, Matni, and Doyle]{wang2019system}
+Y.-S. Wang, N.~Matni, and J.~C. Doyle.
+\newblock A system level approach to controller synthesis.
+\newblock \emph{IEEE Transactions on Automatic Control}, 2019.
+
+\end{thebibliography}

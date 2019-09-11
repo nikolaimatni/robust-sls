@@ -1,0 +1,204 @@
+\documentclass[11pt]{article}
+
+\usepackage{graphicx, amsmath,amsthm,amssymb,url}
+
+\usepackage[labelfont=bf]{subcaption}
+\usepackage[labelfont=bf]{caption}
+\usepackage{algorithm,algcompatible,mathtools}
+\usepackage[multidot]{grffile}
+\usepackage[normalem]{ulem} % just for strikeout
+
+\usepackage{fullpage,etoolbox}
+\usepackage{color}
+\usepackage[square,numbers]{natbib}
+
+ 
+\newtheorem{theorem}{Theorem}
+\numberwithin{theorem}{section}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{coro}[theorem]{Corollary} 
+\newtheorem{remark}{Remark}
+
+\numberwithin{equation}{section}
+
+\newtoggle{draft}
+%\toggletrue{draft}
+\togglefalse{draft}
+
+\newcommand{\todo}[1]{
+\iftoggle{draft}{
+\vspace{5 mm}\par \noindent \marginpar{\textsc{ToDo}}
+\framebox{\begin{minipage}[c]{0.95 \columnwidth} \tt #1
+\end{minipage}}\vspace{5 mm}\par}{}}
+
+\newcommand{\propchange}[1]{
+\iftoggle{draft}{
+	{\leavevmode\color{blue}{#1}}}{\leavevmode{#1}}}
+
+\newcommand{\propdelete}[2]{
+\iftoggle{draft}{
+\textcolor{blue}{\sout{#1} {#2}}}{#2}}
+
+
+\newcommand{\minimize}{\mbox{minimize}}
+\newcommand{\maximize}{\mbox{maximize}}
+\newcommand{\st}{\mbox{subject to}}
+\newcommand{\statespace}[4]{\left[ \begin{array}{c|c} #1 & #2 \\ \hline #3 & #4 \end{array} \right]}
+\newcommand{\tf}[1]{\boldsymbol{#1}}
+\newcommand{\Ah}{\widehat{A}}
+\newcommand{\Ahat}{\Ah}
+\newcommand{\Bhat}{\Bh}
+\newcommand{\Bh}{\widehat{B}}
+\newcommand{\Kh}{\widehat{K}}
+\newcommand{\Jh}{\widehat{J}}
+\newcommand{\Phixh}{\hat{\tf \Phi}_x}
+\newcommand{\Phiuh}{\hat{\tf \Phi}_u}
+\newcommand{\Phix}{\tf\Phi_x}
+\newcommand{\Phiu}{\tf\Phi_u}
+\newcommand{\Dh}{\hat{\tf{\Delta}}}
+\newcommand{\D}{{\tf{\Delta}}}
+\newcommand{\DA}{\D_{\A}}
+\newcommand{\DB}{\D_{\B}}
+\newcommand{\trueA}{A}
+\newcommand{\trueB}{B}
+\newcommand{\trueK}{K_\star}
+\newcommand{\A}{\tf A}
+\newcommand{\B}{\tf B}
+\newcommand{\K}{\tf K}
+\newcommand{\x}{\tf x}
+\newcommand{\xhat}{\tf{\hat x}}
+\newcommand{\uu}{\tf u}
+\newcommand{\w}{\tf u}
+\newcommand{\what}{\hat{\tf w}}
+\newcommand{\eps}{\varepsilon}
+
+\DeclareMathOperator*{\argmin}{arg\!\min}
+\DeclareMathOperator*{\argmax}{arg\!\max}
+\DeclareMathOperator*{\sgn}{sgn}
+\DeclareMathOperator*{\supp}{supp}
+\DeclareMathOperator*{\rank}{rank}
+\DeclareMathOperator*{\diag}{diag}
+\DeclareMathOperator*{\Tr}{\mathbf{Tr}}
+\DeclareMathOperator*{\image}{Im}
+\DeclareMathOperator*{\nullspace}{Kern}
+\DeclareMathOperator*{\rowspace}{RS}
+\DeclareMathOperator*{\colspace}{CS}
+\DeclareMathOperator*{\dom}{dom}
+\DeclareMathOperator*{\closure}{cl}
+\DeclareMathOperator*{\vol}{vol}
+\DeclareMathOperator*{\Span}{span}
+\DeclareMathOperator*{\polylog}{polylog}
+\DeclareMathOperator*{\Band}{Band}
+\newcommand{\grad}{\mathrm{grad}}
+\newcommand{\bias}{\mathrm{Bias}}
+\newcommand{\var}{\mathrm{Var}}
+
+\newcommand{\Acal}{\ensuremath{\mathcal{A}}}
+\newcommand{\Cset}{\ensuremath{\mathcal{C}}}
+\newcommand{\X}{\ensuremath{\mathcal{X}}}
+\newcommand{\Y}{\ensuremath{\mathcal{Y}}}
+\newcommand{\Z}{\ensuremath{\mathcal{Z}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\Bcal}{\ensuremath{\mathcal{B}}}
+\newcommand{\G}{\ensuremath{\mathcal{G}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\F}{\ensuremath{\mathcal{F}}}
+\newcommand{\I}{\ensuremath{\mathcal{I}}}
+\newcommand{\Set}{\ensuremath{\mathcal{S}}}
+\newcommand{\Hyp}{\ensuremath{\mathcal{H}}}
+\newcommand{\Loss}{\ensuremath{\mathcal{L}}}
+\newcommand{\Lagrange}{\ensuremath{\mathcal{L}}}
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+\newcommand{\bignorm}[1]{\left\lVert #1 \right\rVert}
+\newcommand{\twonorm}[1]{\lVert #1 \rVert_{2}}
+\newcommand{\bigtwonorm}[1]{\left\lVert #1 \right\rVert_{2}}
+\newcommand{\spectralnorm}[1]{\twonorm{#1}}
+\newcommand{\bigspectralnorm}[1]{\bigtwonorm{#1}}
+\newcommand{\maxnorm}[1]{\lVert #1 \rVert_{\infty}}
+\newcommand{\onenorm}[1]{\left\lVert #1 \right\rVert_{1}}
+\newcommand{\mb}[1]{\mathbf{#1}}
+\newcommand{\ip}[2]{\ensuremath{\langle #1, #2 \rangle}}
+\newcommand{\PD}[2]{\ensuremath{\frac{\partial #1}{\partial #2}}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\abs}[1]{\ensuremath{| #1 |}}
+\newcommand{\bigabs}[1]{\ensuremath{\left| #1 \right|}}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\Normal}{\mathcal{N}}
+\newcommand{\rdraw}{\xleftarrow{\$}}
+\newcommand{\ind}{\mathbf{1}}
+\renewcommand{\vec}{\mathrm{vec}}
+\newcommand{\Sym}{\mathbf{S}}
+
+\newcommand{\leb}{\mu}
+\renewcommand{\Pr}{\mathbb{P}}
+\newcommand{\T}{*}
+\newcommand{\Ncal}{\mathcal{N}}
+\newcommand{\vecx}{{x}}
+\newcommand{\vecw}{{w}}
+\newcommand{\vecu}{{u}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\Res}[1]{\mathfrak{R}_{#1}}
+
+
+\newcommand{\statedim}{n}
+\newcommand{\inputdim}{p}
+\newcommand{\hinf}{\mathcal{H}_\infty}
+\newcommand{\htwo}{\mathcal{H}_2}
+
+\newcommand{\ltwonorm}[1]{\| #1 \|_2}
+\newcommand{\hinfnorm}[1]{\| #1 \|_{\hinf}}
+\newcommand{\bighinfnorm}[1]{\left \| #1 \right\|_{\hinf}}
+\newcommand{\bightwonorm}[1]{\left \| #1 \right\|_{\htwo}}
+\newcommand{\iid}{\stackrel{\mathclap{\text{\scriptsize{ \tiny i.i.d.}}}}{\sim}}
+\newcommand{\infnorm}[1]{\left\|#1\right\|_{\infty}}
+\newcommand{\linfnorm}[1]{\left\|#1\right\|_{\ell_\infty}}
+\newcommand{\LTV}{\mathcal{L}_{\mathrm{TV}}}
+\newcommand{\LTI}{\mathcal{L}_{\mathrm{TV}}}
+\newcommand{\linffnorm}[1]{\left\|#1\right\|_{\ell_\infty\to\ell_\infty}}
+\newcommand{\Sp}{\tf S_+}
+\newcommand{\Sm}{\tf S_-}
+\newcommand{\RHinf}{\mathcal{RH}_\infty}
+\newcommand{\RLinf}{\mathcal{RL}_\infty}
+
+\newcommand{\opt}{\mathrm{opt}}
+
+\def \basefigwidth{0.49}
+
+
+\title{Robust Performance Guarantees for System Level Synthesis}
+\author{Nikolai Matni
+\vspace{0.0625in}
+\\
+University of Pennsylvania}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+We generalize the system level parameterization of achievable closed loop responses to systems defined by bounded causal linear operators, and use this parameterization to make connections between robust system level synthesis and classical results from the robust control literature.  In particular, by leveraging results from $\mathcal{L}_1$ robust control, we show that necessary and sufficient conditions for robust performance with respect to causal bounded linear uncertainty in the system dynamics can be translated into convex constraints on the system responses.  We exploit this connection to show that these conditions naturally allow the incorporation of delay, sparsity, and locality constraints on the system responses and resulting controller implementation, allowing these methods to be applied to large-scale distributed control problems -- to the best of our knowledge, these are the first robust performance guarantees for distributed control systems.  We also show that for suitably small model uncertainty, sub-optimality bounds on robust performance, as measured with respect to performance achieved by an optimal controller for the true model, can be obtained as a function of the size of the model uncertainty, thus providing a natural bridge between tools from robust control and finite-data guarantees for system identification.
+\end{abstract}
+
+\section{Introduction}
+TODO
+
+\section{Notation}
+\input{notation}
+
+\section{Operator System Level Parameterization}
+\input{op-sls}
+
+\section{Robust Performance under Model Uncertainty}
+\input{performance}
+
+\begin{small}
+\bibliographystyle{abbrvnat}  
+\bibliography{references} 
+\end{small} 
+\end{document}

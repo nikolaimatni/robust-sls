@@ -1,0 +1,22 @@
+%!TEX root = main.tex
+We now use the tools developed in the previous section to identify necessary and sufficient conditions for the robust stability and robust performance of a system \eqref{eq:dynamics} subject to bounded perturbations in its $\A$ and $\B$ operators.  In particular consider the system
+\begin{equation}
+\tf x = \Sp(\A_0 + \DA)\x + \Sp(\B_0 + \DB)\uu + \Sp w,
+\label{eq:uncertain-dynamics}
+\end{equation}
+where $\A_0 = \mathrm{blkdiag}(A,A,\dots)$ and $\B_0 = \mathrm{blkdiag}(B,B,\dots)$ are memoryless LTI operators defining a nominal LTI system $x_{t+1} = Ax_t + Bu_t + w_t$, and $\DA$ and $\DB$ are $\ell_\infty$-stable and satisfy 
+\begin{equation}
+\linffnorm{[\DA,\, \DB]}\leq \eps.
+\label{eq:eps-bound}
+\end{equation}
+We first identify SLS based necessary and sufficient conditions for robust stability, and then build upon those to formulate a robust performance problem.  
+
+We consider the following robust control problem: find a LTI controller $\tf K : \ell_\infty^{n,e} \to \ell_\infty^{p,e}$ such that the dynamics \eqref{eq:  
+
+
+
+Define the controlled output signal as 
+\begin{equation}
+\tf z = C\x + D\uu,
+\end{equation}
+for $C\in \R^{m \times n}$, $D\in \R^{m\times p}$, user specified cost matrices.  Then the closed loop map 
