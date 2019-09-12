@@ -11,13 +11,13 @@ where $\A_0 = \mathrm{blkdiag}(\hat A,\hat A,\dots)$ and $\B_0 = \mathrm{blkdiag
 \end{equation}
 We first identify SLS based necessary and sufficient conditions for robust stability, and then build upon those to formulate a robust performance problem.  
 
-We consider the following robust control problem: find a LTI controller $\tf K : \ell_\infty^{n,e} \to \ell_\infty^{p,e}$, using only the nominal dynamics $(A,B)$ and uncertainty bound $\eps$, such that the dynamics \eqref{eq:uncertain-dynamics} in closed loop with the control law $\uu = \K \x$ is $\ell_\infty$-stable for all admissible uncertainty realizations \eqref{eq:eps-bound}.  To do so, we recognize that for any LTI $\{\Phixh,\Phiuh\}$ satisfying the LTI achievability constraints \eqref{eq:lti-achievable}, we then have that
+We consider the following robust control problem: find a LTI controller $\tf K : \ell^n_{\infty,e} \to \ell^p_{\infty,e}$, using only the nominal dynamics $(\hat A,\hat B)$ and uncertainty bound $\eps$, such that the dynamics \eqref{eq:uncertain-dynamics} in closed loop with the control law $\uu = \K \x$ is $\ell_\infty$-stable for all admissible uncertainty realizations \eqref{eq:eps-bound}.  To do so, we recognize that for any LTI $\{\Phixh,\Phiuh\}$ satisfying the LTI achievability constraints \eqref{eq:lti-achievable}, we then have that
 \begin{multline}
 \begin{bmatrix} I - \Sp\A_0 - \Sp\DA & - \Sp\B_0 - \Sp\DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix} \\= \begin{bmatrix} I - \Sp\A_0 & - \Sp\B_0 \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix} - \begin{bmatrix} \Sp\DA & \Sp\DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix}\\ = \Sp\left(I - \Sp\begin{bmatrix} \DA & \DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix} \right)
 \end{multline}
 where the final inequality follows from the assumption that $\{\Phixh,\Phiuh\}$ satisfy the LTI achievability constraints \eqref{eq:lti-achievable}, or equivalently \eqref{eq:osls-achievable}, defined in terms of the dynamics $(\hat A, \hat B)$.  Noting that
 \begin{equation}
-\Dh := \begin{bmatrix} \Sp\DA & \Sp\DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix},
+\Dh := \Sp\begin{bmatrix} \DA & \DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix},
 \end{equation}
 is a strictly causal $\ell_\infty$-stable operator, we conclude by the robust parameterization of Theorem \ref{thm:robust-sls} that the controller implementation \eqref{eq:realization} defined in terms of the LTI operators $\{\Phixh,\Phiuh\}$ achieves the following closed loop behavior when applied to the uncertain dynamics \eqref{eq:uncertain-dynamics}:
 \begin{equation}
