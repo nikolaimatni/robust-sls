@@ -10,7 +10,7 @@
 
 \usepackage{fullpage,etoolbox}
 \usepackage{color}
-\usepackage[square,numbers]{natbib}
+\usepackage[numbers,sort,compress]{natbib}
 
  
 \newtheorem{theorem}{Theorem}
@@ -71,7 +71,7 @@
 \newcommand{\x}{\tf x}
 \newcommand{\xhat}{\tf{\hat x}}
 \newcommand{\uu}{\tf u}
-\newcommand{\w}{\tf u}
+\newcommand{\w}{\tf w}
 \newcommand{\what}{\hat{\tf w}}
 \newcommand{\eps}{\varepsilon}
 
@@ -177,7 +177,7 @@
 \author{Nikolai Matni
 \vspace{0.0625in}
 \\
-University of Pennsylvania}
+Department of Electrical and Systems Engineering, University of Pennsylvania}
 
 \date{\today}
 
@@ -188,9 +188,10 @@ We generalize the system level synthesis framework to systems defined by bounded
 \end{abstract}
 
 \section{Introduction}
-TODO
+\label{sec:introduction}
+\input{introduction}
 
-\section{Notation}
+\section{Notation and Preliminaries}
 \label{sec:notation}
 \input{notation}
 
@@ -206,6 +207,6 @@ TODO
 
 \begin{small}
 \bibliographystyle{abbrvnat}  
-\bibliography{references} 
+\bibliography{references,Distributed} 
 \end{small} 
 \end{document}

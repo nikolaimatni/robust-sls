@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{20}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -41,11 +41,57 @@ M.~H. Khammash.
   with structured uncertainty}.
 \newblock PhD thesis, Rice University, 1990.
 
+\bibitem[Lessard(2014)]{lessard2014state}
+L.~Lessard.
+\newblock State-space solution to a minimum-entropy $h_\infty$-optimal control
+  problem with a nested information constraint.
+\newblock In \emph{53rd IEEE Conference on Decision and Control}, pages
+  4026--4031. IEEE, 2014.
+
+\bibitem[Mahajan et~al.(2012)Mahajan, Martins, Rotkowitz, and
+  Yuksel]{2012_Mahajan_Info_survey}
+A.~Mahajan, N.~Martins, M.~Rotkowitz, and S.~Yuksel.
+\newblock Information structures in optimal decentralized control.
+\newblock In \emph{Decision and Control (CDC), 2012 IEEE 51st Annual Conference
+  on}, pages 1291--1306, 2012.
+\newblock \doi{10.1109/CDC.2012.6425819}.
+
+\bibitem[Matni(2014)]{matni2014distributed}
+N.~Matni.
+\newblock Distributed control subject to delays satisfying an $h_\infty$ norm
+  bound.
+\newblock In \emph{53rd IEEE Conference on Decision and Control}, pages
+  4006--4013. IEEE, 2014.
+
 \bibitem[Matni et~al.(2017)Matni, Wang, and Anderson]{matni2017scalable}
 N.~Matni, Y.-S. Wang, and J.~Anderson.
 \newblock Scalable system level synthesis for virtually localizable systems.
 \newblock In \emph{2017 IEEE 56th Annual Conference on Decision and Control
   (CDC)}, pages 3473--3480. IEEE, 2017.
+
+\bibitem[Megretski and Rantzer(1997)]{megretski1997system}
+A.~Megretski and A.~Rantzer.
+\newblock System analysis via integral quadratic constraints.
+\newblock \emph{IEEE Transactions on Automatic Control}, 42\penalty0
+  (6):\penalty0 819--830, 1997.
+
+\bibitem[Packard and Doyle(1993)]{packard1993complex}
+A.~Packard and J.~Doyle.
+\newblock The complex structured singular value.
+\newblock \emph{Automatica}, 29\penalty0 (1):\penalty0 71--109, 1993.
+
+\bibitem[Rotkowitz and Lall(2006)]{2006_Rotkowitz_QI_TAC}
+M.~Rotkowitz and S.~Lall.
+\newblock A characterization of convex problems in decentralized control.
+\newblock \emph{Automatic Control, IEEE Transactions on}, 51\penalty0
+  (2):\penalty0 274--286, 2006.
+
+\bibitem[{Rösinger} and {Scherer}(2017)]{rosinger2017structured}
+C.~A. {Rösinger} and C.~W. {Scherer}.
+\newblock Structured controller design with applications to networked systems.
+\newblock In \emph{2017 IEEE 56th Annual Conference on Decision and Control
+  (CDC)}, pages 4771--4776, Dec 2017.
+\newblock \doi{10.1109/CDC.2017.8264365}.
 
 \bibitem[Wang and Matni(2016)]{wang2016localized}
 Y.-S. Wang and N.~Matni.
@@ -70,5 +116,17 @@ Y.-S. Wang, N.~Matni, and J.~C. Doyle.
 Y.-S. Wang, N.~Matni, and J.~C. Doyle.
 \newblock A system level approach to controller synthesis.
 \newblock \emph{IEEE Transactions on Automatic Control}, 2019.
+
+\bibitem[Zheng et~al.(2019)Zheng, Furieri, Papachristodoulou, Li, and
+  Kamgarpour]{zheng2019equivalence}
+Y.~Zheng, L.~Furieri, A.~Papachristodoulou, N.~Li, and M.~Kamgarpour.
+\newblock On the equivalence of youla, system-level and input-output
+  parameterizations.
+\newblock \emph{arXiv preprint arXiv:1907.06256}, 2019.
+
+\bibitem[Zhou et~al.(1996)Zhou, Doyle, and Glover]{zhou1996robust}
+K.~Zhou, J.~C. Doyle, and K.~Glover.
+\newblock \emph{Robust and optimal control}.
+\newblock Prentice Hall New Jersey, 1996.
 
 \end{thebibliography}

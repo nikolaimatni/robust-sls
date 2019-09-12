@@ -11,7 +11,7 @@ where $\A_0 = \mathrm{blkdiag}(\hat A,\hat A,\dots)$ and $\B_0 = \mathrm{blkdiag
 \end{equation}
 We first identify SLS based necessary and sufficient conditions for robust stability, and then build upon those to formulate a robust performance problem.  
 
-We consider the following robust control problem: find a LTI controller $\tf K : \ell^n_{\infty,e} \to \ell^p_{\infty,e}$, using only the nominal dynamics $(\hat A,\hat B)$ and uncertainty bound $\eps$, such that the dynamics \eqref{eq:uncertain-dynamics} in closed loop with the control law $\uu = \K \x$ is $\ell_\infty$-stable for all admissible uncertainty realizations \eqref{eq:eps-bound}.  To do so, we recognize that for any LTI $\{\Phixh,\Phiuh\}$ satisfying the LTI achievability constraints \eqref{eq:lti-achievable}, we then have that
+We consider the following robust control problem: find a LTI controller $\tf K : \ell^n_{\infty,e} \to \ell^p_{\infty,e}$, using only the nominal dynamics $(\hat A,\hat B)$ and uncertainty bound $\eps$, such that the dynamics \eqref{eq:uncertain-dynamics} in closed loop with the control law $\uu = \K \x$ is $\ell_\infty$-stable for all admissible uncertainty realizations $(\DA,\DB)$ satisfying \eqref{eq:eps-bound}.  To do so, we recognize that for any LTI $\{\Phixh,\Phiuh\}$ satisfying the LTI achievability constraints \eqref{eq:lti-achievable}, we then have that
 \begin{multline}
 \begin{bmatrix} I - \Sp\A_0 - \Sp\DA & - \Sp\B_0 - \Sp\DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix} \\= \begin{bmatrix} I - \Sp\A_0 & - \Sp\B_0 \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix} - \begin{bmatrix} \Sp\DA & \Sp\DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix}\\ = \Sp\left(I - \Sp\begin{bmatrix} \DA & \DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix} \right)
 \end{multline}
@@ -19,16 +19,19 @@ where the final inequality follows from the assumption that $\{\Phixh,\Phiuh\}$ 
 \begin{equation}
 \Dh := \Sp\begin{bmatrix} \DA & \DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix},
 \end{equation}
-is a strictly causal $\ell_\infty$-stable operator, we conclude by the robust parameterization of Theorem \ref{thm:robust-sls} that the controller implementation \eqref{eq:realization} defined in terms of the LTI operators $\{\Phixh,\Phiuh\}$ achieves the following closed loop behavior when applied to the uncertain dynamics \eqref{eq:uncertain-dynamics}:
+is a strictly causal $\ell_\infty$-stable operator, we conclude by Theorem \ref{thm:robust-sls} that the controller implementation \eqref{eq:realization} defined in terms of the LTI operators $\{\Phixh,\Phiuh\}$ achieves the following closed loop behavior when applied to the uncertain dynamics \eqref{eq:uncertain-dynamics}:
 \begin{equation}
 \begin{bmatrix}\x \\ \uu \end{bmatrix} = \begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix}(I+\Dh)^{-1}.
+\label{eq:dhat-response}
 \end{equation}
 Further this control law is internally stabilizing if and only if $(I+\Dh)^{-1}$ is $\ell_\infty$-stable.  
+
 Defining the controlled output signal as 
 \begin{equation}
 \tf z = \tf C\x + \tf D\uu,
+\label{eq:z-output}
 \end{equation}
-for $\tf C = \mathrm{blkdiag}(C,C,\dots)$ and $\tf D = \mathrm{blkdiag}(D,D,\dots)$, user specified cost matrices, and consider the goal of minimizing the $\ell_\infty\to\ell_\infty$ induced gain from $\tf w \to \tf z$ of the uncertain system \eqref{eq:uncertain-dynamics}.  We can then pose the robust performance problem for a specified performance level $\gamma \geq 0$ as finding LTI operators $\{\Phixh,\Phiuh\}$ that satisfy 
+for $\tf C = \mathrm{blkdiag}(C,C,\dots)$ and $\tf D = \mathrm{blkdiag}(D,D,\dots)$, user specified cost matrices,\footnote{For simplicity, we assume $\tf C$ and $\tf D$ to be memoryless and LTI, however our results are equally applicable when the controlled output is defined in terms frequency weighted filters $\tf C(z)$ and $\tf D(z)$.} and consider the goal of minimizing the $\ell_\infty\to\ell_\infty$ induced gain from $\tf w \to \tf z$ of the uncertain system \eqref{eq:uncertain-dynamics}.  We can then pose the robust performance problem for a specified performance level $\gamma \geq 0$ as finding LTI operators $\{\Phixh,\Phiuh\}$ that satisfy 
 \begin{equation}\label{eq:robust-perf1}
 \begin{aligned}
 & \linffnorm{\begin{bmatrix} \tf C & \tf D \end{bmatrix} \begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix} \left(I-\Sp\begin{bmatrix} \DA & \DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix}\right)^{-1} } \leq \gamma \\
@@ -36,7 +39,7 @@ for $\tf C = \mathrm{blkdiag}(C,C,\dots)$ and $\tf D = \mathrm{blkdiag}(D,D,\dot
 & \left(I-\Sp\begin{bmatrix} \DA & \DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix}\right)^{-1} \text{ is $\ell_\infty$-stable}
 \end{aligned}
 \end{equation}
-for all $(\DA,\DB)$ satisfying bound \eqref{eq:eps-bound}.
+for all $(\DA,\DB)$ satisfying bound \eqref{eq:eps-bound}, where we have combined equations \eqref{eq:z-output} and \eqref{eq:dhat-response} to derive the robust performance bound condition.
 
 To lighten notation going forward, we let
 \begin{equation}
@@ -50,9 +53,9 @@ With this notation, the robust performance problem \eqref{eq:robust-perf1} is eq
 & Z_{AB}\Phih = I,\ \Phih \in \frac{1}{z}\RHinf,\   (I-\Phih\D)^{-1} \text{ is $\ell_\infty$-stable}\\
 \end{aligned}
 \end{equation}
-for all $\D$ satisfying $\linffnorm{\D}\leq 1$, where we have used that $(I-\Delta\Phih)^{-1} = I + \Delta(I-\Phih\Delta)^{-1}\Phih$ and that $(I-GH)^{-1}$ is $\ell_\infty$-stable if and only if $(I-HG)^{-1}$ is $\ell_\infty$-stable \cite{khammash1990stability} to recast the expression \eqref{eq:robust-perf1} in a form that matches the linear-fractional-transform (LFT) structure studied in classical robust control.
+for all $\D$ satisfying $\linffnorm{\D}\leq 1$, where we have used that $(I-\Delta\Phih)^{-1} = I + \Delta(I-\Phih\Delta)^{-1}\Phih$ and that $(I-GH)^{-1}$ is $\ell_\infty$-stable if and only if $(I-HG)^{-1}$ is $\ell_\infty$-stable (see Proposition 1, \cite{khammash1990stability}) to recast the expression \eqref{eq:robust-perf1} in a form that matches the linear-fractional-transform (LFT) structure studied in \cite{khammash1990stability,dahleh1994control}.
 
-We can therefore leverage the equivalence between robust stability and performance \cite{khammash1990stability,dahleh1994control} to conclude that $\Phih$ satisfies the robust performance conditions \eqref{eq:robust-perf} for all $\linffnorm{\D}\leq 1$ if and only if the augmented LTI system
+We can therefore leverage the equivalence between robust stability and performance (see Theorem 5.1, \cite{khammash1990stability}) to conclude that $\Phih$ satisfies the robust performance conditions \eqref{eq:robust-perf} for all $\linffnorm{\D}\leq 1$ if and only if the augmented LTI system
 \begin{equation}
 \tf M = \begin{bmatrix} \frac{1}{\gamma}\Q\Phih & \frac{1}{\gamma}\Q\Phih \\ \eps\Phih & \eps\Phih \end{bmatrix}
 \label{eq:bigM}
@@ -71,6 +74,6 @@ The necessary and sufficient conditions for robust stability of the resulting tw
 \end{equation}
 
 Finally, we remark that although the constraints \eqref{eq:constraints} are in general infinite-dimensional due to the transfer matrix $\Phih$, principled finite-dimensional approximations, some of which enjoy provable sub-optimality guarantees, are available \cite{matni2017scalable,anderson2019system,dean2017sample,dean2018regret}.  Further, for the $\mathcal{L}_1$ problem considered here, the resulting optimization problem can be posed as a linear program, thus enjoying favorable computational complexity properties.
-It then follows that by bisecting on $\gamma$, e.g., by using golden search, we can find a performance level $\gamma$, and corresponding system responses, that satisfies $\gamma \leq \gamma_\star + \epsilon$ in $O\log(1/\epsilon)$ iterations, for $\gamma_\star$ the smallest $\gamma$ such that the set defined by \eqref{eq:constraints} is non-empty.
+It then follows that by bisecting on $\gamma$, e.g., by using golden search, we can find a performance level $\gamma$, and corresponding system responses and controller, satisfying $\gamma \leq \gamma_\star + \epsilon$ in $O\log_2(1/\epsilon)$ iterations, for $\gamma_\star$ the smallest $\gamma$ such that the set defined by \eqref{eq:constraints} is non-empty.
 %Thus, an LTI controller $\K=\Phiuh\Phixh^{-1}$ is robustly stabilizing for system \eqref{eq:uncertain-dynamics} if and only if the operators $\left\{\Phixh,\Phiuh\right\}$ satisfy
 
