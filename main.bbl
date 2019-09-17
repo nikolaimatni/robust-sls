@@ -1,15 +1,36 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[{Ahmadi} et~al.(2018){Ahmadi}, {Cubuktepe}, {Topcu}, and
+  {Tanaka}]{ahmadi2018distributed}
+M.~{Ahmadi}, M.~{Cubuktepe}, U.~{Topcu}, and T.~{Tanaka}.
+\newblock Distributed synthesis using accelerated admm.
+\newblock In \emph{2018 Annual American Control Conference (ACC)}, pages
+  6206--6211, June 2018.
+\newblock \doi{10.23919/ACC.2018.8431859}.
+
+\bibitem[Anderson et~al.(2011)Anderson, Teixeira, Sandberg, and
+  Papachristodoulou]{anderson2011dynamical}
+J.~Anderson, A.~Teixeira, H.~Sandberg, and A.~Papachristodoulou.
+\newblock Dynamical system decomposition using dissipation inequalities.
+\newblock In \emph{2011 50th IEEE Conference on Decision and Control and
+  European Control Conference}, pages 211--216. IEEE, 2011.
+
 \bibitem[Anderson et~al.(2019)Anderson, Doyle, Low, and
   Matni]{anderson2019system}
 J.~Anderson, J.~C. Doyle, S.~H. Low, and N.~Matni.
 \newblock System level synthesis.
 \newblock \emph{Annual Reviews in Control}, 2019.
+
+\bibitem[Arcak et~al.(2016)Arcak, Meissen, and Packard]{arcak2016networks}
+M.~Arcak, C.~Meissen, and A.~Packard.
+\newblock \emph{Networks of dissipative systems: compositional certification of
+  stability, performance, and safety}.
+\newblock Springer, 2016.
 
 \bibitem[Dahleh and Diaz-Bobillo(1994)]{dahleh1994control}
 M.~A. Dahleh and I.~J. Diaz-Bobillo.
@@ -40,6 +61,15 @@ M.~H. Khammash.
 \newblock \emph{Stability and performance robustness of discrete-time systems
   with structured uncertainty}.
 \newblock PhD thesis, Rice University, 1990.
+
+\bibitem[{Langbort} et~al.(2004){Langbort}, {Chandra}, and
+  {D'Andrea}]{langbort2004distributed}
+C.~{Langbort}, R.~S. {Chandra}, and R.~{D'Andrea}.
+\newblock Distributed control design for systems interconnected over an
+  arbitrary graph.
+\newblock \emph{IEEE Transactions on Automatic Control}, 49\penalty0
+  (9):\penalty0 1502--1519, Sep. 2004.
+\newblock \doi{10.1109/TAC.2004.834123}.
 
 \bibitem[Lessard(2014)]{lessard2014state}
 L.~Lessard.
@@ -74,6 +104,13 @@ A.~Megretski and A.~Rantzer.
 \newblock System analysis via integral quadratic constraints.
 \newblock \emph{IEEE Transactions on Automatic Control}, 42\penalty0
   (6):\penalty0 819--830, 1997.
+
+\bibitem[Meissen et~al.(2015)Meissen, Lessard, Arcak, and
+  Packard]{meissen2015compositional}
+C.~Meissen, L.~Lessard, M.~Arcak, and A.~K. Packard.
+\newblock Compositional performance certification of interconnected systems
+  using admm.
+\newblock \emph{Automatica}, 61:\penalty0 55--63, 2015.
 
 \bibitem[Packard and Doyle(1993)]{packard1993complex}
 A.~Packard and J.~Doyle.

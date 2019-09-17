@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  12 SEP 2019 14:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  13 SEP 2019 17:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -365,18 +365,24 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 185.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(./introduction.tex [1
+(./introduction.tex
+
+Package natbib Warning: Citation `wang2015localized' on page 1 undefined on inp
+ut line 7.
+
+[1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 6.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 11.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
-)
-(./notation.tex [2]
-<well-posed.pdf, id=26, 374.39874pt x 161.60374pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
+) (./notation.tex
+[2]
+<well-posed.pdf, id=17, 374.39874pt x 161.60374pt>
 File: well-posed.pdf Graphic file (type pdf)
 <use well-posed.pdf>
 Package pdftex.def Info: well-posed.pdf  used on input line 8.
@@ -387,65 +393,70 @@ File: lti-interconnect.pdf Graphic file (type pdf)
 <use lti-interconnect.pdf>
 Package pdftex.def Info: lti-interconnect.pdf  used on input line 20.
 (pdftex.def)             Requested size: 187.89914pt x 123.59406pt.
- [4 <./lti-interconnect.pdf>]
-<simple-interconnect.pdf, id=263, 490.83376pt x 258.9675pt>
+ [4 <./lti-interconnect.pdf>] [5]
+<simple-interconnect.pdf, id=266, 490.83376pt x 258.9675pt>
 File: simple-interconnect.pdf Graphic file (type pdf)
 <use simple-interconnect.pdf>
 Package pdftex.def Info: simple-interconnect.pdf  used on input line 75.
 (pdftex.def)             Requested size: 187.89914pt x 99.13574pt.
- [5]
-<interconnect.pdf, id=267, 492.84125pt x 334.24875pt>
+
+[6 <./simple-interconnect.pdf>]
+<interconnect.pdf, id=365, 492.84125pt x 334.24875pt>
 File: interconnect.pdf Graphic file (type pdf)
 <use interconnect.pdf>
-Package pdftex.def Info: interconnect.pdf  used on input line 116.
+Package pdftex.def Info: interconnect.pdf  used on input line 119.
 (pdftex.def)             Requested size: 187.89914pt x 127.43405pt.
- [6 <./simple-interconnect.pdf>] [7 <./interconnect.pdf>])
-(./performance.tex [8] [9]
+ [7 <./interconnect.pdf>]) (./performance.tex
+[8] [9]
 Overfull \hbox (0.37367pt too wide) in paragraph at lines 58--59
 \OT1/cmr/m/n/10.95 rem 5.1, [[]]) to con-clude that $[]$ sat-is-fies the ro-bus
 t per-for-mance con-di-tions [] for all $[][] \OMS/cmsy/m/n/10.95 ^^T
  []
 
-) (./extensions.tex [10]) (./main.bbl [11]) [12] (./main.aux) ) 
+[10]) (./extensions.tex) (./conclusion.tex [11]) (./main.bbl [12])
+
+Package natbib Warning: There were undefined citations.
+
+[13] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 5944 strings out of 492616
- 86789 string characters out of 6129482
- 174360 words of memory out of 5000000
- 9720 multiletter control sequences out of 15000+600000
+ 5963 strings out of 492616
+ 87283 string characters out of 6129482
+ 174738 words of memory out of 5000000
+ 9736 multiletter control sequences out of 15000+600000
  21012 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,20n,40p,1900b,344s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texl
-ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/
-2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/20
-19/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/201
-9/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2019/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2019/texmf-d
-ist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2019/tex
-mf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/local/texlive/2019
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (12 pages, 1434221 bytes).
+ 42i,20n,40p,1832b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cme
+xtra/cmex8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib1
+0.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/c
+mmib8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cmext
+ra/cmmib9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6
+.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
+b></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
+r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/l
+ocal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loc
+al/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
+/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/t
+exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (13 pages, 1446886 bytes).
 PDF statistics:
- 607 PDF objects out of 1000 (max. 8388607)
- 485 compressed objects within 5 object streams
+ 615 PDF objects out of 1000 (max. 8388607)
+ 491 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

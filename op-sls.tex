@@ -11,7 +11,7 @@ Note that if $\tf A$ and $\tf B$ are memoryless and time invariant, i.e., if the
 x_{t+1} = A x_t + Bu_t + w_t, \, x_0 = 0,
 \label{eq:lti-dynamics}
 \end{equation}
-where once again stability of the closed loop system is determined by the stability of the operator $(zI-A)^{-1}$ as opposed to the boundedness of the matrix $A$.
+where once again stability of the open-loop system is determined by the stability of the operator $(zI-A)^{-1}$ as opposed to the boundedness of the matrix $A$.
 
 For LTI systems \eqref{eq:lti-dynamics}, the System Level Synthesis (SLS) framework \cite{wang2019system,anderson2019system} provides an appealing parameterization of all closed loop responses from $\tf w \to (\tf x, \tf u)$ achievable by a causal state-feedback $\ell_\infty$-stabilizing (equivalently internally stabilizing) LTI control law $\tf K$ such that $\tf u = \tf K \tf x$, as summarized in the following theorem.  We remind the reader that a controller $\tf K$ is $\ell_\infty$-stabilizing (equivalently internally stabilizing) if its interconnection with the system dynamics, as illustrated in Fig. \ref{fig:lti-interconnect}, defines an $\ell_\infty$-stable map from $(\tf w, \tf \delta_y, \tf \delta_u) \to (\tf x, \tf u, \what)$ (see III.A of \cite{wang2019system} ).
 
@@ -73,7 +73,7 @@ Here we characterize a set of affine constraints that the closed loop system res
 \begin{figure}
 \centering
 \includegraphics[width=.4\textwidth]{simple-interconnect}
-\caption{A controller $\tf K$ is said to be $\ell_\infty$ stabilizing with respect to dynamics \eqref{eq:dynamics} if the illustrated interconnection is $\ell_\infty$-stable as a map from $(\tf w, \tf \delta_y, \tf \delta_u)\to (\x,\uu,\tf \beta)$, where $\tf \beta$ is any signal internal to the controller $\tf K$.}
+\caption{A controller $\tf K$ is said to be $\ell_\infty$-stabilizing with respect to dynamics \eqref{eq:dynamics} if the illustrated interconnection is $\ell_\infty$-stable as a map from $(\tf w, \tf \delta_y, \tf \delta_u)\to (\x,\uu,\tf \beta)$, where $\tf \beta$ is any signal internal to the controller $\tf K$.}
 \label{fig:simple-interconnect}
 \end{figure}
 
@@ -82,12 +82,15 @@ Let $\tf K: \ell^n_{\infty,e} \to \ell^p_{\infty,e}$ be a linear, causal, and $\
 %such that $(I-\Sp(\A+\B\K))^{-1}\Sp$ and $\K(I-\Sp(\A+\B\K))^{-1}\Sp$ are $\ell_\infty$-stable, i.e., let $\tf K$ be a linear causal controller such that closed loop maps from $\tf w \to (\tf x, \tf u)$ are $\ell_\infty$-stable.  
 Then all maps taking $\tf w \to (\tf x, \tf u)$ achievable by such a $\tf K$ satisfy the constraints
 \begin{equation}
-\begin{bmatrix} I-\Sp\A & - \Sp\B\end{bmatrix}\begin{bmatrix} \Phix \\ \Phiu \end{bmatrix} = \Sp, \ \Phix, \Phiu \text{ strictly causal, linear, and $\ell_\infty$-stable.}
+\begin{aligned}
+&\begin{bmatrix} I-\Sp\A & - \Sp\B\end{bmatrix}\begin{bmatrix} \Phix \\ \Phiu \end{bmatrix} = \Sp, \\ &\Phix, \Phiu \text{ strictly causal, linear, and $\ell_\infty$-stable.}
+\end{aligned}
 \label{eq:osls-achievable}
 \end{equation}
 \end{proposition}
+
 \begin{proof}
-Basic algebra shows that the map from $\tf w \to \x$ is given by $(I-\Sp(\A+\B\K))^{-1}\Sp$, and that the map from $\tf w \to \uu$ is given by $\K(I-\Sp(\A+\B\K))^{-1}\Sp$.  By assumption, both of these maps are $\ell_\infty$-stable,\footnote{That they are well posed is immediate as $\Sp(\A+\B\K)$ is strictly causal.}, as $\tf K$ is an $\ell_\infty$-stabilizing controller.
+Basic algebra shows that the map from $\tf w \to \x$ is given by $(I-\Sp(\A+\B\K))^{-1}\Sp$, and that the map from $\tf w \to \uu$ is given by $\K(I-\Sp(\A+\B\K))^{-1}\Sp$.  By assumption, both of these maps are $\ell_\infty$-stable,\footnote{That they are well posed is immediate as $\Sp(\A+\B\K)$ is strictly causal.} as $\tf K$ is an $\ell_\infty$-stabilizing controller.
 %As $\Sp(\A+\B\K)$ is strictly causal, the feedback interconnection is well posed in the sense that $(I-\Sp(\A+\B\K))^{-1}$ exists as a map from $\ell^n_{\infty,e} \to \ell^n_{\infty,e}$.  
 By assumption, both $(I-\Sp(\A+\B\K))^{-1}$ and $\tf K(I-\Sp(\A+\B\K))^{-1}$ are $\ell_\infty$-stable.  Defining
 \[
@@ -167,7 +170,10 @@ Thus Propositions \ref{prop:necessity} and \ref{prop:sufficiency} show that the 
 \begin{theorem}\label{thm:robust-sls}
 Let $\A\in\LTV^{n,n}$ and $\B\in\LTV^{n,p}$, and suppose that $\left\{\Phixh,\Phiuh\right\}$ satisfy
 \begin{equation}
-\begin{bmatrix} I-\Sp\A & - \Sp\B\end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix} = \Sp(I-\D), \ \Phix, \Phiu \text{ strictly causal, linear, and $\ell_\infty$-stable,}
+\begin{aligned}
+&\begin{bmatrix} I-\Sp\A & - \Sp\B\end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix} = \Sp(I-\D), \\ 
+& \Phix, \Phiu \text{ strictly causal, linear, and $\ell_\infty$-stable,}
+\end{aligned}
 \end{equation}
 for $\D$ a strictly causal linear operator from $\ell^n_{\infty,e}\to \ell^n_{\infty,e}$.  Then the controller implementation \eqref{eq:realization} defined in terms of the operators $\left\{\Phixh,\Phiuh\right\}$ is well posed and achieves the following response
 \begin{equation}
@@ -179,6 +185,7 @@ Further, this interconnection is $\ell_\infty$-stable if and only if $(I-\D)^{-1
 \begin{proof}
 As $\D$ is strictly causal by assumption, $I_\D:= (I-\D)^{-1}$ exists as a map from $\ell^n_{\infty,e} \to \ell^n_{\infty,e}$.  Going through a similar argument as that in the proof of Proposition \ref{prop:sufficiency}, we observe that
 \begin{equation}
+\scriptstyle
 \begin{bmatrix}
 \x \\ \uu \\ \what
 \end{bmatrix} =
