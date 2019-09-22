@@ -108,12 +108,6 @@ J.~Anderson, A.~Teixeira, H.~Sandberg, and A.~Papachristodoulou, ``Dynamical
 J.~Anderson, J.~C. Doyle, S.~H. Low, and N.~Matni, ``System level synthesis,''
   \emph{Annual Reviews in Control}, 2019.
 
-\bibitem{matni2017scalable}
-N.~Matni, Y.-S. Wang, and J.~Anderson, ``Scalable system level synthesis for
-  virtually localizable systems,'' in \emph{2017 IEEE 56th Annual Conference on
-  Decision and Control (CDC)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
-  2017, pp. 3473--3480.
-
 \bibitem{wang2014localized}
 Y.-S. Wang, N.~Matni, and J.~C. Doyle, ``Localized lqr optimal control,'' in
   \emph{53rd IEEE Conference on Decision and Control}.\hskip 1em plus 0.5em
@@ -128,6 +122,12 @@ Y.-S. Wang and N.~Matni, ``Localized lqg optimal control for large-scale
 Y.-S. Wang, N.~Matni, and J.~C. Doyle, ``Separable and localized system-level
   synthesis for large-scale systems,'' \emph{IEEE Transactions on Automatic
   Control}, vol.~63, no.~12, pp. 4234--4249, 2018.
+
+\bibitem{matni2017scalable}
+N.~Matni, Y.-S. Wang, and J.~Anderson, ``Scalable system level synthesis for
+  virtually localizable systems,'' in \emph{2017 IEEE 56th Annual Conference on
+  Decision and Control (CDC)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
+  2017, pp. 3473--3480.
 
 \bibitem{dean2017sample}
 S.~Dean, H.~Mania, N.~Matni, B.~Recht, and S.~Tu, ``On the sample complexity of

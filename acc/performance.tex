@@ -1,4 +1,4 @@
-%!TEX root = main.tex
+%!TEX root = main-ugly.tex
 We now use the tools developed in the previous section to identify necessary and sufficient conditions for the robust stability and robust performance of a system \eqref{eq:dynamics} subject to bounded perturbations in its $\A$ and $\B$ operators.  In particular consider the system
 \begin{equation}
 \tf x = \Sp(\A_0 + \DA)\x + \Sp(\B_0 + \DB)\uu + \Sp \w,
@@ -13,7 +13,7 @@ We first identify SLS based necessary and sufficient conditions for robust stabi
 
 We consider the following robust control problem: find a LTI controller $\tf K : \ell^n_{\infty,e} \to \ell^p_{\infty,e}$, using only the nominal dynamics $(\hat A,\hat B)$ and uncertainty bound $\eps$, such that the dynamics \eqref{eq:uncertain-dynamics} in closed loop with the control law $\uu = \K \x$ is $\ell_\infty$-stable for all admissible uncertainty realizations $(\DA,\DB)$ satisfying \eqref{eq:eps-bound}.  To do so, we recognize that for any LTI $\{\Phixh,\Phiuh\}$ satisfying the LTI achievability constraints \eqref{eq:lti-achievable} defined by $(\hat A, \hat B)$, we then have that
 \begin{multline}
-\begin{bmatrix} I - \Sp\A_0 - \Sp\DA & - \Sp\B_0 - \Sp\DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix} \\= \begin{bmatrix} I - \Sp\A_0 & - \Sp\B_0 \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix} - \begin{bmatrix} \Sp\DA & \Sp\DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix}\\ = \Sp\left(I - \Sp\begin{bmatrix} \DA & \DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix} \right)
+\begin{bmatrix} I - \Sp\A_0 - \Sp\DA & - \Sp\B_0 - \Sp\DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix} \\= \begin{bmatrix} I - \Sp\A_0 & - \Sp\B_0 \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix}\\ - \begin{bmatrix} \Sp\DA & \Sp\DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix}\\ = \Sp\left(I - \Sp\begin{bmatrix} \DA & \DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix} \right)
 \end{multline}
 where the final inequality follows from the assumption that $\{\Phixh,\Phiuh\}$ satisfy the LTI achievability constraints \eqref{eq:lti-achievable}, or equivalently \eqref{eq:osls-achievable}, defined in terms of the dynamics $(\hat A, \hat B)$.  Noting that
 \begin{equation}
@@ -31,22 +31,21 @@ Defining the controlled output signal as
 \tf z = \tf C\x + \tf D\uu,
 \label{eq:z-output}
 \end{equation}
-for $\tf C = \mathrm{blkdiag}(C,C,\dots)$ and $\tf D = \mathrm{blkdiag}(D,D,\dots)$ user specified cost matrices,\footnote{For simplicity, we assume $\tf C$ and $\tf D$ to be memoryless and LTI, however our results are equally applicable when the controlled output is defined in terms of LTI  filters $\tf C(z)$ and $\tf D(z)$.} and consider the goal of minimizing the $\ell_\infty\to\ell_\infty$ induced gain from $\tf w \to \tf z$ of the uncertain system \eqref{eq:uncertain-dynamics}.  We can then pose the robust performance problem for a specified performance level $\gamma \geq 0$ as finding LTI operators $\{\Phixh,\Phiuh\}$ that satisfy 
+for $\tf C = \mathrm{blkdiag}(C,C,\dots)$ and $\tf D = \mathrm{blkdiag}(D,D,\dots)$ user specified cost matrices,\footnote{For simplicity, we assume $\tf C$ and $\tf D$ to be memoryless and LTI, however our results are equally applicable when the controlled output is defined in terms of LTI  filters $\tf C(z)$ and $\tf D(z)$.} and consider the goal of minimizing the $\ell_\infty\to\ell_\infty$ induced gain from $\tf w \to \tf z$ of the uncertain system \eqref{eq:uncertain-dynamics}.  To lighten notation going forward, we let
+\begin{multline}
+\tf Q := \begin{bmatrix} \tf C & \tf D \end{bmatrix}, \ \Phih := \begin{bmatrix}\Phixh \\ \Phiuh \end{bmatrix}, \\ \D := \frac{1}{\eps}\Sp\begin{bmatrix} \DA & \DB \end{bmatrix}, \ Z_{AB} := \begin{bmatrix} zI-\hat A & - \hat B\end{bmatrix}.
+\label{eq:notation}
+\end{multline}
+
+We can then pose the robust performance problem for a specified performance level $\gamma \geq 0$ as finding LTI operators $\{\Phixh,\Phiuh\}$ that satisfy 
 \begin{equation}\label{eq:robust-perf1}
 \begin{aligned}
-& \linffnorm{\begin{bmatrix} \tf C & \tf D \end{bmatrix} \begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix} \left(I-\Sp\begin{bmatrix} \DA & \DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix}\right)^{-1} } \leq \gamma \\
-& \begin{bmatrix} zI - \hat A   - \hat B \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix} = I,\ \Phixh, \Phiuh \in \frac{1}{z}\RHinf, \\
-& \left(I-\Sp\begin{bmatrix} \DA & \DB \end{bmatrix}\begin{bmatrix} \Phixh \\ \Phiuh \end{bmatrix}\right)^{-1} \text{ is $\ell_\infty$-stable}
+&{ \bignorm{\Q\Phih \left(I-\eps\Sp\D\Phih\right)^{-1} }_{\ell_\infty \to \ell_\infty}} \leq \gamma \\
+&Z_{AB}\Phih = I,\ \Phih \in \frac{1}{z}\RHinf, \\
+& \left(I-\eps\Sp\D\Phih\right)^{-1} \text{ is $\ell_\infty$-stable}
 \end{aligned}
 \end{equation}
-for all $(\DA,\DB)$ satisfying bound \eqref{eq:eps-bound}, where we have combined equations \eqref{eq:z-output} and \eqref{eq:dhat-response} to derive the robust performance bound condition.
-
-To lighten notation going forward, we let
-\begin{equation}
-\tf Q := \begin{bmatrix} \tf C & \tf D \end{bmatrix}, \ \Phih := \begin{bmatrix}\Phixh \\ \Phiuh \end{bmatrix}, \ \D := \frac{1}{\eps}\Sp\begin{bmatrix} \DA & \DB \end{bmatrix}, \ Z_{AB} := \begin{bmatrix} zI-\hat A & - \hat B\end{bmatrix}.
-\end{equation}
-
-With this notation, the robust performance problem \eqref{eq:robust-perf1} is equivalent to finding an LTI operator $\Phih$ satisfying
+for all $\D$ satisfying $\linffnorm{\D}\leq 1$, where we have combined equations  \eqref{eq:dhat-response}, \eqref{eq:z-output}, and \eqref{eq:notation} to derive the robust performance bound condition.  It then follows that the robust performance problem \eqref{eq:robust-perf1} is equivalent to finding an LTI operator $\Phih$ satisfying
 \begin{equation} \label{eq:robust-perf}
 \begin{aligned}
 & \linffnorm{\frac{1}{\gamma}\Q\Phih + \frac{1}{\gamma}\Q\Phih\D(I-(\eps\Phih)\D)^{-1}(\eps\Phih)} \leq 1 \\
@@ -61,9 +60,9 @@ We can therefore leverage the equivalence between robust stability and performan
 \label{eq:bigM}
 \end{equation}
 is robustly stable for all structured perturbations $\tilde{\D}$ satisfying
-\begin{equation}
-\tilde{\D} = \mathrm{blkdiag}\left(\D_1,\D_2\right), \, \D_1, \D_2 \in \LTV, \,  \linffnorm{\D_1} \leq 1, \linffnorm{\D_2} \leq 1.
-\end{equation}
+\begin{multline}
+\tilde{\D} = \mathrm{blkdiag}\left(\D_1,\D_2\right), \, \D_1, \D_2 \in \LTV, \\ \linffnorm{\D_1} \leq 1, \linffnorm{\D_2} \leq 1.
+\end{multline}
 
 The necessary and sufficient conditions for robust stability of the resulting two-block problem can be derived as a special case of Theorem 6.3 of \cite{khammash1990stability}.  The particular case of an  augmented LTI system $\tf M$ satisfying $\tf M_{11} = \tf M_{12}$ and $\tf M_{21} = \tf M_{22}$, as is the case for our problem \eqref{eq:bigM}, is addressed in Ch 8.3 of \cite{khammash1990stability}, where a similarly structured augmented system \eqref{eq:bigM} arises in the context of bounding output sensitivity in the presence of output perturbations.  The necessary and sufficient conditions specified in Theorem 6.3 of \cite{khammash1990stability} reduce to the following \emph{convex} constraints on the system response $\Phih$
 \begin{equation} \label{eq:constraints}

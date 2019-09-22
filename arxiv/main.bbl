@@ -1,0 +1,169 @@
+\begin{thebibliography}{25}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{Ahmadi} et~al.(2018){Ahmadi}, {Cubuktepe}, {Topcu}, and
+  {Tanaka}]{ahmadi2018distributed}
+M.~{Ahmadi}, M.~{Cubuktepe}, U.~{Topcu}, and T.~{Tanaka}.
+\newblock Distributed synthesis using accelerated admm.
+\newblock In \emph{2018 Annual American Control Conference (ACC)}, pages
+  6206--6211, June 2018.
+\newblock \doi{10.23919/ACC.2018.8431859}.
+
+\bibitem[Anderson et~al.(2011)Anderson, Teixeira, Sandberg, and
+  Papachristodoulou]{anderson2011dynamical}
+J.~Anderson, A.~Teixeira, H.~Sandberg, and A.~Papachristodoulou.
+\newblock Dynamical system decomposition using dissipation inequalities.
+\newblock In \emph{2011 50th IEEE Conference on Decision and Control and
+  European Control Conference}, pages 211--216. IEEE, 2011.
+
+\bibitem[Anderson et~al.(2019)Anderson, Doyle, Low, and
+  Matni]{anderson2019system}
+J.~Anderson, J.~C. Doyle, S.~H. Low, and N.~Matni.
+\newblock System level synthesis.
+\newblock \emph{Annual Reviews in Control}, 2019.
+
+\bibitem[Arcak et~al.(2016)Arcak, Meissen, and Packard]{arcak2016networks}
+M.~Arcak, C.~Meissen, and A.~Packard.
+\newblock \emph{Networks of dissipative systems: compositional certification of
+  stability, performance, and safety}.
+\newblock Springer, 2016.
+
+\bibitem[Dahleh and Diaz-Bobillo(1994)]{dahleh1994control}
+M.~A. Dahleh and I.~J. Diaz-Bobillo.
+\newblock \emph{Control of uncertain systems: a linear programming approach}.
+\newblock Prentice-Hall, Inc., 1994.
+
+\bibitem[Dean et~al.(2017)Dean, Mania, Matni, Recht, and Tu]{dean2017sample}
+S.~Dean, H.~Mania, N.~Matni, B.~Recht, and S.~Tu.
+\newblock On the sample complexity of the linear quadratic regulator.
+\newblock \emph{arXiv preprint arXiv:1710.01688}, 2017.
+
+\bibitem[Dean et~al.(2018)Dean, Mania, Matni, Recht, and Tu]{dean2018regret}
+S.~Dean, H.~Mania, N.~Matni, B.~Recht, and S.~Tu.
+\newblock Regret bounds for robust adaptive control of the linear quadratic
+  regulator.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  4188--4197, 2018.
+
+\bibitem[Dean et~al.(2019)Dean, Tu, Matni, and Recht]{dean2019safely}
+S.~Dean, S.~Tu, N.~Matni, and B.~Recht.
+\newblock Safely learning to control the constrained linear quadratic
+  regulator.
+\newblock In \emph{2019 American Control Conference (ACC)}, pages 5582--5588.
+  IEEE, 2019.
+
+\bibitem[Khammash(1990)]{khammash1990stability}
+M.~H. Khammash.
+\newblock \emph{Stability and performance robustness of discrete-time systems
+  with structured uncertainty}.
+\newblock PhD thesis, Rice University, 1990.
+
+\bibitem[{Langbort} et~al.(2004){Langbort}, {Chandra}, and
+  {D'Andrea}]{langbort2004distributed}
+C.~{Langbort}, R.~S. {Chandra}, and R.~{D'Andrea}.
+\newblock Distributed control design for systems interconnected over an
+  arbitrary graph.
+\newblock \emph{IEEE Transactions on Automatic Control}, 49\penalty0
+  (9):\penalty0 1502--1519, Sep. 2004.
+\newblock \doi{10.1109/TAC.2004.834123}.
+
+\bibitem[Lessard(2014)]{lessard2014state}
+L.~Lessard.
+\newblock State-space solution to a minimum-entropy $h_\infty$-optimal control
+  problem with a nested information constraint.
+\newblock In \emph{53rd IEEE Conference on Decision and Control}, pages
+  4026--4031. IEEE, 2014.
+
+\bibitem[Mahajan et~al.(2012)Mahajan, Martins, Rotkowitz, and
+  Yuksel]{2012_Mahajan_Info_survey}
+A.~Mahajan, N.~Martins, M.~Rotkowitz, and S.~Yuksel.
+\newblock Information structures in optimal decentralized control.
+\newblock In \emph{Decision and Control (CDC), 2012 IEEE 51st Annual Conference
+  on}, pages 1291--1306, 2012.
+\newblock \doi{10.1109/CDC.2012.6425819}.
+
+\bibitem[Matni(2014)]{matni2014distributed}
+N.~Matni.
+\newblock Distributed control subject to delays satisfying an $h_\infty$ norm
+  bound.
+\newblock In \emph{53rd IEEE Conference on Decision and Control}, pages
+  4006--4013. IEEE, 2014.
+
+\bibitem[Matni et~al.(2017)Matni, Wang, and Anderson]{matni2017scalable}
+N.~Matni, Y.-S. Wang, and J.~Anderson.
+\newblock Scalable system level synthesis for virtually localizable systems.
+\newblock In \emph{2017 IEEE 56th Annual Conference on Decision and Control
+  (CDC)}, pages 3473--3480. IEEE, 2017.
+
+\bibitem[Megretski and Rantzer(1997)]{megretski1997system}
+A.~Megretski and A.~Rantzer.
+\newblock System analysis via integral quadratic constraints.
+\newblock \emph{IEEE Transactions on Automatic Control}, 42\penalty0
+  (6):\penalty0 819--830, 1997.
+
+\bibitem[Meissen et~al.(2015)Meissen, Lessard, Arcak, and
+  Packard]{meissen2015compositional}
+C.~Meissen, L.~Lessard, M.~Arcak, and A.~K. Packard.
+\newblock Compositional performance certification of interconnected systems
+  using admm.
+\newblock \emph{Automatica}, 61:\penalty0 55--63, 2015.
+
+\bibitem[Packard and Doyle(1993)]{packard1993complex}
+A.~Packard and J.~Doyle.
+\newblock The complex structured singular value.
+\newblock \emph{Automatica}, 29\penalty0 (1):\penalty0 71--109, 1993.
+
+\bibitem[Rotkowitz and Lall(2006)]{2006_Rotkowitz_QI_TAC}
+M.~Rotkowitz and S.~Lall.
+\newblock A characterization of convex problems in decentralized control.
+\newblock \emph{Automatic Control, IEEE Transactions on}, 51\penalty0
+  (2):\penalty0 274--286, 2006.
+
+\bibitem[{Rösinger} and {Scherer}(2017)]{rosinger2017structured}
+C.~A. {Rösinger} and C.~W. {Scherer}.
+\newblock Structured controller design with applications to networked systems.
+\newblock In \emph{2017 IEEE 56th Annual Conference on Decision and Control
+  (CDC)}, pages 4771--4776, Dec 2017.
+\newblock \doi{10.1109/CDC.2017.8264365}.
+
+\bibitem[Wang and Matni(2016)]{wang2016localized}
+Y.-S. Wang and N.~Matni.
+\newblock Localized lqg optimal control for large-scale systems.
+\newblock In \emph{2016 American Control Conference (ACC)}, pages 1954--1961.
+  IEEE, 2016.
+
+\bibitem[Wang et~al.(2014)Wang, Matni, and Doyle]{wang2014localized}
+Y.-S. Wang, N.~Matni, and J.~C. Doyle.
+\newblock Localized lqr optimal control.
+\newblock In \emph{53rd IEEE Conference on Decision and Control}, pages
+  1661--1668. IEEE, 2014.
+
+\bibitem[Wang et~al.(2018)Wang, Matni, and Doyle]{wang2018separable}
+Y.-S. Wang, N.~Matni, and J.~C. Doyle.
+\newblock Separable and localized system-level synthesis for large-scale
+  systems.
+\newblock \emph{IEEE Transactions on Automatic Control}, 63\penalty0
+  (12):\penalty0 4234--4249, 2018.
+
+\bibitem[Wang et~al.(2019)Wang, Matni, and Doyle]{wang2019system}
+Y.-S. Wang, N.~Matni, and J.~C. Doyle.
+\newblock A system level approach to controller synthesis.
+\newblock \emph{IEEE Transactions on Automatic Control}, 2019.
+
+\bibitem[Zheng et~al.(2019)Zheng, Furieri, Papachristodoulou, Li, and
+  Kamgarpour]{zheng2019equivalence}
+Y.~Zheng, L.~Furieri, A.~Papachristodoulou, N.~Li, and M.~Kamgarpour.
+\newblock On the equivalence of youla, system-level and input-output
+  parameterizations.
+\newblock \emph{arXiv preprint arXiv:1907.06256}, 2019.
+
+\bibitem[Zhou et~al.(1996)Zhou, Doyle, and Glover]{zhou1996robust}
+K.~Zhou, J.~C. Doyle, and K.~Glover.
+\newblock \emph{Robust and optimal control}.
+\newblock Prentice Hall New Jersey, 1996.
+
+\end{thebibliography}

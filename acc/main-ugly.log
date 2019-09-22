@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  13 SEP 2019 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  22 SEP 2019 17:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -438,27 +438,24 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 194.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (./introduction.tex
-
-LaTeX Warning: Citation `wang2015localized' on page 1 undefined on input line 7
-.
-
-
-Underfull \hbox (badness 1824) in paragraph at lines 11--12
+Underfull \hbox (badness 1824) in paragraph at lines 9--10
 \OT1/ptm/m/n/10 sta-bi-liz-ing state-feedback con-trollers for finite-
  []
 
-[1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+Underfull \vbox (badness 4543) has occurred while \output is active []
+
+ [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-])
-(./notation.tex
+]) (./notation.tex
 <well-posed.pdf, id=13, 374.39874pt x 161.60374pt>
 File: well-posed.pdf Graphic file (type pdf)
 <use well-posed.pdf>
 Package pdftex.def Info: well-posed.pdf  used on input line 8.
 (pdftex.def)             Requested size: 91.05885pt x 39.30351pt.
 ) (./op-sls.tex
-Underfull \vbox (badness 3942) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2 <./well-posed.pdf>]
 Underfull \hbox (badness 4229) in paragraph at lines 9--10
@@ -502,10 +499,10 @@ Package pdftex.def Info: simple-interconnect.pdf  used on input line 75.
 <interconnect.pdf, id=261, 492.84125pt x 334.24875pt>
 File: interconnect.pdf Graphic file (type pdf)
 <use interconnect.pdf>
-Package pdftex.def Info: interconnect.pdf  used on input line 119.
+Package pdftex.def Info: interconnect.pdf  used on input line 120.
 (pdftex.def)             Requested size: 187.89914pt x 127.43405pt.
 
-Underfull \hbox (badness 1400) in paragraph at lines 125--126
+Underfull \hbox (badness 1400) in paragraph at lines 126--127
 []\OT1/ptm/m/n/10 Let $[]$ sat-isfy con-straint
  []
 
@@ -516,44 +513,15 @@ T1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 and $[][] \OT1/cmr/m/n/10 =
  []
 
 [5 <./interconnect.pdf>]
-Overfull \hbox (24.15321pt too wide) detected at line 17
- []$[] \OT1/cmr/m/n/10 = [] [] \OMS/cmsy/m/n/10 ^^@ [] []$ 
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 33--35
 \OT1/ptm/m/n/10 for $[] \OT1/cmr/m/n/10 = [](\OML/cmm/m/it/10 C; C; [] \OT1/cmr
 /m/n/10 )$ \OT1/ptm/m/n/10 and $[] \OT1/cmr/m/n/10 =
  []
 
 
-Underfull \hbox (badness 5817) in paragraph at lines 33--35
-[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 D; D; [] \OT1/cmr/m/n/10 )$\OT1/ptm/m/n/10 
-, user spec-i-fied cost ma-tri-ces,[]
- []
-
-
-Underfull \hbox (badness 1728) in paragraph at lines 33--35
-[]\OT1/ptm/m/n/10 . We can then pose the ro-bust per-for-mance
- []
-
-
-Overfull \hbox (35.11928pt too wide) detected at line 41
-[][]
- []
-
-
-Overfull \hbox (113.5578pt too wide) detected at line 47
-[] \OT1/cmr/m/n/10 := [] \OML/cmm/m/it/10 ;  [] \OT1/cmr/m/n/10 := [] \OML/cmm/
-m/it/10 ;  [] \OT1/cmr/m/n/10 := [][][] [] \OML/cmm/m/it/10 ;  Z[] \OT1/cmr/m/n
-/10 := [] \OML/cmm/m/it/10 :
- []
-
-
-Overfull \hbox (98.77074pt too wide) detected at line 66
-[] \OT1/cmr/m/n/10 = [] [] \OML/cmm/m/it/10 ;  [][]; [][] \OMS/cmsy/m/n/10 2 L[
-]\OML/cmm/m/it/10 ;  [][] \OMS/cmsy/m/n/10 ^^T \OT1/cmr/m/n/10 1\OML/cmm/m/it/1
-0 ; [][] \OMS/cmsy/m/n/10 ^^T \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :
+Underfull \hbox (badness 7888) in paragraph at lines 33--35
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 D; D; [] \OT1/cmr/m/n/10 )$ \OT1/ptm/m/n/10
+ user spec-i-fied cost ma-tri-ces,[]
  []
 
 [6]) (./extensions.tex
@@ -561,7 +529,7 @@ Underfull \hbox (badness 1394) in paragraph at lines 4--4
  \OT1/ptm/m/it/10 A. Ro-bust Per-for-mance Guar-an-tees for Large-Scale
  []
 
-) (./conclusion.tex) (./main-ugly.bbl [7]
+) (./conclusion.tex) [7] (./main-ugly.bbl
 Underfull \hbox (badness 1436) in paragraph at lines 61--64
 \OT1/ptm/m/n/8 output pa-ram-e-ter-i-za-tions,'' \OT1/ptm/m/it/8 arXiv preprint
  arXiv:1907.06256\OT1/ptm/m/n/8 ,
@@ -579,48 +547,44 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the US letter (8.5in X 11in) paper size.
 
-[8] (./main-ugly.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[8] (./main-ugly.aux) ) 
 Here is how much of TeX's memory you used:
- 6082 strings out of 492616
- 91856 string characters out of 6129482
- 186021 words of memory out of 5000000
- 9855 multiletter control sequences out of 15000+600000
+ 6083 strings out of 492616
+ 91869 string characters out of 6129482
+ 183032 words of memory out of 5000000
+ 9856 multiletter control sequences out of 15000+600000
  48969 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,20n,40p,1905b,318s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
-xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texl
-ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive
-/2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texl
-ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive
-/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/201
-9/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2019/
-texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
-/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/20
-19/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2019/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019/texmf-dist/fon
-ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/u
-rw/times/utmbi8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/
-utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.pf
-b>
-Output written on main-ugly.pdf (8 pages, 1424524 bytes).
+ 42i,19n,40p,1862b,318s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base
+/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7
+.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.p
+fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
+b></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7
+.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pf
+b></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
+usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></us
+r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb>
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.
+pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
+b></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><
+/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
+r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
+ocal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
+cal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/loca
+l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/
+texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/te
+xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
+ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texliv
+e/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/tex
+mf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2019/texmf-dist/f
+onts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1
+/urw/times/utmri8a.pfb>
+Output written on main-ugly.pdf (8 pages, 1424408 bytes).
 PDF statistics:
  602 PDF objects out of 1000 (max. 8388607)
  483 compressed objects within 5 object streams
