@@ -1,4 +1,4 @@
-%!TEX root = main.tex
+%!TEX root = main-ugly.tex
 Let $\tf A \in \LTV^{n,n}$ and $\tf B \in \LTV^{n,p}$, and consider the dynamical system mapping $\ell^n_{\infty,e} \times \ell^p_{\infty,e} \to \ell^n_{\infty,e}$ defined by
 \begin{equation}
 \tf x = \Sp\tf A\tf x + \Sp \tf B \tf u + \Sp \tf w, \ x_0 = 0.
@@ -126,7 +126,7 @@ We now show how to construct an internally stabilizing controller from any stric
 Let $\left\{\Phix,\Phiu\right\}$ satisfy constraint \eqref{eq:osls-achievable}.  Then the controller implementation shown in Fig. \ref{fig:realization}, described by the equations
 \begin{equation}
 \begin{array}{rcl}
-\tf u &=& \Phix \Sm \tf{\hat w}\\
+\tf u &=& \Phiu \Sm \tf{\hat w}\\
 \tf{\hat w} & = & \x - \tf{\hat x}, \, \hat{w}_0 = 0, \\
 \tf{\hat x} &=& (\Phix\Sm-I)\tf{\hat w},
 \end{array}

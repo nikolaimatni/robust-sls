@@ -11,7 +11,7 @@
 % on the last page of the document
 %\usepackage{graphicx, amsmath,amsthm,amssymb,url}
 \usepackage{graphicx, amsmath,amssymb,url}
-
+\usepackage{cite}
 \usepackage[labelfont=bf]{subcaption}
 \usepackage[labelfont=bf]{caption}
 \usepackage{algorithm,algcompatible,mathtools}
@@ -30,7 +30,7 @@
 \newtheorem{coro}[theorem]{Corollary} 
 \newtheorem{remark}{Remark}
 
-\numberwithin{equation}{section}
+%\numberwithin{equation}{section}
 
 \newtoggle{draft}
 %\toggletrue{draft}
@@ -193,7 +193,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-We generalize the system level synthesis framework to systems defined by bounded causal linear operators, and use this parameterization to make connections between robust system level synthesis and classical results from the robust control literature.  In particular, by leveraging results from $\mathcal{L}_1$ robust control, we show that necessary and sufficient conditions for robust performance with respect to causal bounded linear uncertainty in the system dynamics can be translated into convex constraints on the system responses.  We exploit this connection to show that these conditions naturally allow for the incorporation of delay, sparsity, and locality constraints on the system responses and resulting controller implementation, allowing these methods to be applied to large-scale distributed control problems -- to the best of our knowledge, these are the first such robust performance guarantees for distributed control systems.  %We also show that for suitably small model uncertainty, sub-optimality bounds on robust performance, as measured with respect to performance achieved by an optimal controller for the true model, can be obtained as a function of the size of the model uncertainty, thus providing a natural bridge between tools from robust control and finite-data guarantees for system identification.
+We generalize the system level synthesis framework to systems defined by bounded causal linear operators, and use this parameterization to make connections between robust system level synthesis and the robust control literature.  In particular, by leveraging results from $\mathcal{L}_1$ robust control, we show that necessary and sufficient conditions for robust performance with respect to causal bounded linear uncertainty in the system dynamics can be translated into convex constraints on the system responses.  We exploit this connection to show that these conditions naturally allow for the incorporation of delay, sparsity, and locality constraints on the system responses and resulting controller implementation, allowing these methods to be applied to large-scale distributed control problems -- to the best of our knowledge, these are the first such robust performance guarantees for distributed control systems.  %We also show that for suitably small model uncertainty, sub-optimality bounds on robust performance, as measured with respect to performance achieved by an optimal controller for the true model, can be obtained as a function of the size of the model uncertainty, thus providing a natural bridge between tools from robust control and finite-data guarantees for system identification.
 \end{abstract}
 
 \section{Introduction}
@@ -213,6 +213,10 @@ We generalize the system level synthesis framework to systems defined by bounded
 \input{performance}
 
 \input{extensions}
+
+\section{Experiments}
+\label{sec:experiments}
+Write me!
 
 \section{Conclusion and Future Work}
 \label{sec:conclusion}

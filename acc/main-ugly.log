@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  22 SEP 2019 17:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  6 MAR 2020 15:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -194,6 +194,11 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (/usr/local/texlive/2019/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
 )
 (/usr/local/texlive/2019/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
@@ -438,24 +443,30 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 194.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (./introduction.tex
-Underfull \hbox (badness 1824) in paragraph at lines 9--10
+Underfull \hbox (badness 1824) in paragraph at lines 10--11
 \OT1/ptm/m/n/10 sta-bi-liz-ing state-feedback con-trollers for finite-
  []
 
-
-Underfull \vbox (badness 4543) has occurred while \output is active []
-
- [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]) (./notation.tex
-<well-posed.pdf, id=13, 374.39874pt x 161.60374pt>
+]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 15.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
+)
+(./notation.tex
+<well-posed.pdf, id=15, 374.39874pt x 161.60374pt>
 File: well-posed.pdf Graphic file (type pdf)
 <use well-posed.pdf>
 Package pdftex.def Info: well-posed.pdf  used on input line 8.
 (pdftex.def)             Requested size: 91.05885pt x 39.30351pt.
 ) (./op-sls.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3942) has occurred while \output is active []
 
  [2 <./well-posed.pdf>]
 Underfull \hbox (badness 4229) in paragraph at lines 9--10
@@ -484,13 +495,6 @@ Underfull \hbox (badness 5133) in paragraph at lines 57--58
  []
 
 [3 <./lti-interconnect.pdf>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 68.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 68.
 <simple-interconnect.pdf, id=260, 490.83376pt x 258.9675pt>
 File: simple-interconnect.pdf Graphic file (type pdf)
 <use simple-interconnect.pdf>
@@ -529,7 +533,7 @@ Underfull \hbox (badness 1394) in paragraph at lines 4--4
  \OT1/ptm/m/it/10 A. Ro-bust Per-for-mance Guar-an-tees for Large-Scale
  []
 
-) (./conclusion.tex) [7] (./main-ugly.bbl
+) (./conclusion.tex) (./main-ugly.bbl [7]
 Underfull \hbox (badness 1436) in paragraph at lines 61--64
 \OT1/ptm/m/n/8 output pa-ram-e-ter-i-za-tions,'' \OT1/ptm/m/it/8 arXiv preprint
  arXiv:1907.06256\OT1/ptm/m/n/8 ,
@@ -549,13 +553,13 @@ Before submitting the final camera ready copy, remember to:
 
 [8] (./main-ugly.aux) ) 
 Here is how much of TeX's memory you used:
- 6083 strings out of 492616
- 91869 string characters out of 6129482
- 183032 words of memory out of 5000000
- 9856 multiletter control sequences out of 15000+600000
+ 6168 strings out of 492616
+ 92993 string characters out of 6129482
+ 183751 words of memory out of 5000000
+ 9938 multiletter control sequences out of 15000+600000
  48969 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,19n,40p,1862b,318s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,19n,40p,1837b,318s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base
 /8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
 10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7
@@ -584,7 +588,7 @@ e/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/tex
 mf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2019/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on main-ugly.pdf (8 pages, 1424408 bytes).
+Output written on main-ugly.pdf (8 pages, 1424781 bytes).
 PDF statistics:
  602 PDF objects out of 1000 (max. 8388607)
  483 compressed objects within 5 object streams

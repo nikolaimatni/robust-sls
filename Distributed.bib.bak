@@ -1,4 +1,5 @@
-% Encoding: x-windows-950
+% This file was created with JabRef 2.8.1.
+% Encoding: MS950
 
 @article{2012_Sabau_stabilizability,
   title={Stabilizability and norm-optimal control design subject to sparsity constraints},
@@ -22,7 +23,7 @@ year={1989},
 volume={34}, 
 number={8}, 
 pages={831-847}, 
-keywords={optimal control;state-space methods;transfer functions;H??? control;H??? norm;H2 control;LQG;algebraic Riccati equations;closed-loop transfer function;linear fractional transformation;optimal control;spectral radius;state-space formulas;1f noise;Bridges;Centralized control;Game theory;H infinity control;NASA;Output feedback;Riccati equations;Space technology;State feedback}, 
+keywords={optimal control;state-space methods;transfer functions;H∞ control;H∞ norm;H2 control;LQG;algebraic Riccati equations;closed-loop transfer function;linear fractional transformation;optimal control;spectral radius;state-space formulas;1f noise;Bridges;Centralized control;Game theory;H infinity control;NASA;Output feedback;Riccati equations;Space technology;State feedback}, 
 doi={10.1109/9.29425}, 
 ISSN={0018-9286}, 
 month={Aug},}
@@ -143,7 +144,7 @@ year={2018},
 volume={},
 number={},
 pages={6206-6211},
-keywords={continuous time systems;control system synthesis;convex programming;H??? control;large-scale systems;robust control;topology;robust controllers;large-scale continuous time systems;exogenous disturbances;local dissipation inequality;H??? synthesis problems;distributed synthesis method;accelerated ADMM;convex distributed optimization algorithm;interconnection topology;accelerated alternating direction method of multipliers;Topology;Large-scale systems;Interconnected systems;Silicon;Acceleration;Convergence;Optimization},
+keywords={continuous time systems;control system synthesis;convex programming;H∞ control;large-scale systems;robust control;topology;robust controllers;large-scale continuous time systems;exogenous disturbances;local dissipation inequality;H∞ synthesis problems;distributed synthesis method;accelerated ADMM;convex distributed optimization algorithm;interconnection topology;accelerated alternating direction method of multipliers;Topology;Large-scale systems;Interconnected systems;Silicon;Acceleration;Convergence;Optimization},
 doi={10.23919/ACC.2018.8431859},
 ISSN={},
 month={June},}
@@ -888,4 +889,3 @@ month={Dec},}
   year={2015},
   publisher={Elsevier}
 }
-@Comment{jabref-meta: databaseType:bibtex;}
