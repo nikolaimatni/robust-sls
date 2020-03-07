@@ -54,8 +54,9 @@ A.~Mahajan, N.~Martins, M.~Rotkowitz, and S.~Yuksel, ``Information structures
   IEEE 51st Annual Conference on}, 2012, pp. 1291--1306.
 
 \bibitem{wang2019system}
-Y.-S. Wang, N.~Matni, and J.~C. Doyle, ``A system level approach to controller
-  synthesis,'' \emph{IEEE Transactions on Automatic Control}, 2019.
+Y.~{Wang}, N.~{Matni}, and J.~C. {Doyle}, ``A system-level approach to
+  controller synthesis,'' \emph{IEEE Transactions on Automatic Control},
+  vol.~64, no.~10, pp. 4079--4093, Oct 2019.
 
 \bibitem{zheng2019equivalence}
 Y.~Zheng, L.~Furieri, A.~Papachristodoulou, N.~Li, and M.~Kamgarpour, ``On the
@@ -134,15 +135,15 @@ S.~Dean, H.~Mania, N.~Matni, B.~Recht, and S.~Tu, ``On the sample complexity of
   the linear quadratic regulator,'' \emph{arXiv preprint arXiv:1710.01688},
   2017.
 
-\bibitem{dean2019safely}
-S.~Dean, S.~Tu, N.~Matni, and B.~Recht, ``Safely learning to control the
-  constrained linear quadratic regulator,'' in \emph{2019 American Control
-  Conference (ACC)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2019, pp.
-  5582--5588.
+\bibitem{diamond2016cvxpy}
+S.~Diamond and S.~Boyd, ``Cvxpy: A python-embedded modeling language for convex
+  optimization,'' \emph{The Journal of Machine Learning Research}, vol.~17,
+  no.~1, pp. 2909--2913, 2016.
 
-\bibitem{dean2018regret}
-S.~Dean, H.~Mania, N.~Matni, B.~Recht, and S.~Tu, ``Regret bounds for robust
-  adaptive control of the linear quadratic regulator,'' in \emph{Advances in
-  Neural Information Processing Systems}, 2018, pp. 4188--4197.
+\bibitem{andersen2000mosek}
+E.~D. Andersen and K.~D. Andersen, ``The mosek interior point optimizer for
+  linear programming: an implementation of the homogeneous algorithm,'' in
+  \emph{High performance optimization}.\hskip 1em plus 0.5em minus 0.4em\relax
+  Springer, 2000, pp. 197--232.
 
 \end{thebibliography}

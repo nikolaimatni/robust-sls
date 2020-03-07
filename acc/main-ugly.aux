@@ -15,11 +15,13 @@
 \citation{matni2017scalable}
 \citation{khammash1990stability}
 \citation{khammash1990stability}
-\@writefile{toc}{\contentsline {section}{\numberline {II}Notation and Preliminaries}{2}\protected@file@percent }
-\newlabel{sec:notation}{{II}{2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A feedback interconnection between systems $\mathbf  {G}$ and $\mathbf  {H}$.\relax }}{2}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:well-posed}{{1}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Notation and Preliminaries}{2}\protected@file@percent }
+\newlabel{sec:notation}{{II}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Operator System Level Parameterization}{2}\protected@file@percent }
+\newlabel{sec:operator}{{III}{2}}
 \citation{dahleh1994control}
 \citation{wang2019system,anderson2019system}
 \citation{wang2019system}
@@ -27,10 +29,11 @@
 \citation{wang2014localized,wang2016localized,wang2018separable}
 \citation{matni2017scalable}
 \citation{matni2017scalable}
+\citation{matni2017scalable}
+\citation{dean2017sample}
+\citation{khammash1990stability,dahleh1994control}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The proposed $\ell _\infty $-stabilizing (equivalently internally stabilizing) state-feedback controller structure defined by equations \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces 5\hbox {}\unskip \@@italiccorr )}}.\relax }}{3}\protected@file@percent }
 \newlabel{fig:lti-interconnect}{{2}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {III}Operator System Level Parameterization}{3}\protected@file@percent }
-\newlabel{sec:operator}{{III}{3}}
 \newlabel{eq:dynamics}{{1}{3}}
 \newlabel{eq:lti-dynamics}{{2}{3}}
 \newlabel{thm:lti-sls}{{III.1}{3}}
@@ -39,19 +42,16 @@
 \newlabel{eq:lti-realization}{{5}{3}}
 \newlabel{thm:lti-robust}{{III.2}{3}}
 \newlabel{eq:lti-robust}{{6}{3}}
-\citation{matni2017scalable}
-\citation{dean2017sample,dean2019safely}
-\citation{khammash1990stability,dahleh1994control}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces A controller $\boldsymbol  {K}$ is said to be $\ell _\infty $-stabilizing with respect to dynamics \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces 1\hbox {}\unskip \@@italiccorr )}} if the illustrated interconnection is $\ell _\infty $-stable as a map from $(\boldsymbol  {w}, \boldsymbol  {\delta }_y, \boldsymbol  {\delta }_u)\to (\boldsymbol  {x},\boldsymbol  {u},\boldsymbol  {\beta })$, where $\boldsymbol  {\beta }$ is any signal internal to the controller $\boldsymbol  {K}$.\relax }}{4}\protected@file@percent }
 \newlabel{fig:simple-interconnect}{{3}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {III-A}Necessary Conditions}{4}\protected@file@percent }
 \newlabel{prop:necessity}{{III.3}{4}}
 \newlabel{eq:osls-achievable}{{8}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The proposed state-feedback controller structure defined by equations \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces 11\hbox {}\unskip \@@italiccorr )}}.\relax }}{4}\protected@file@percent }
+\newlabel{fig:realization}{{4}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {III-B}Controller Implementation}{4}\protected@file@percent }
 \newlabel{prop:sufficiency}{{III.4}{4}}
 \newlabel{eq:realization}{{11}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The proposed state-feedback controller structure defined by equations \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces 11\hbox {}\unskip \@@italiccorr )}}.\relax }}{5}\protected@file@percent }
-\newlabel{fig:realization}{{4}{5}}
 \newlabel{eq:response}{{12}{5}}
 \newlabel{eq:internal-stability}{{13}{5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {III-C}Robust Operator System Level Synthesis}{5}\protected@file@percent }
@@ -67,28 +67,30 @@
 \citation{khammash1990stability}
 \citation{khammash1990stability}
 \citation{khammash1990stability}
+\citation{matni2017scalable,anderson2019system,dean2017sample}
 \newlabel{eq:dhat-response}{{22}{6}}
 \newlabel{eq:z-output}{{23}{6}}
 \newlabel{eq:notation}{{24}{6}}
 \newlabel{eq:robust-perf1}{{25}{6}}
 \newlabel{eq:robust-perf}{{26}{6}}
 \newlabel{eq:bigM}{{27}{6}}
-\citation{matni2017scalable,anderson2019system,dean2017sample,dean2018regret}
+\newlabel{eq:constraints}{{29}{6}}
 \citation{wang2014localized,wang2016localized,wang2018separable}
 \citation{wang2018separable}
 \citation{khammash1990stability}
-\citation{wang2018separable}
-\citation{dean2017sample,dean2018regret,dean2019safely}
-\bibstyle{IEEEtran}
-\bibdata{references,Distributed}
-\bibcite{khammash1990stability}{1}
-\newlabel{eq:constraints}{{29}{7}}
+\citation{anderson2019system}
 \@writefile{toc}{\contentsline {subsection}{\numberline {IV-A}Robust Performance Guarantees for Large-Scale Distributed Control}{7}\protected@file@percent }
 \newlabel{sec:extensions}{{IV-A}{7}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Experiments}{7}\protected@file@percent }
 \newlabel{sec:experiments}{{V}{7}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion and Future Work}{7}\protected@file@percent }
-\newlabel{sec:conclusion}{{VI}{7}}
+\newlabel{eq:chain}{{30}{7}}
+\citation{wang2018separable}
+\citation{diamond2016cvxpy}
+\citation{andersen2000mosek}
+\citation{wang2018separable}
+\bibstyle{IEEEtran}
+\bibdata{references,Distributed}
+\bibcite{khammash1990stability}{1}
 \bibcite{dahleh1994control}{2}
 \bibcite{zhou1996robust}{3}
 \bibcite{packard1993complex}{4}
@@ -111,6 +113,10 @@
 \bibcite{wang2018separable}{21}
 \bibcite{matni2017scalable}{22}
 \bibcite{dean2017sample}{23}
-\bibcite{dean2019safely}{24}
-\bibcite{dean2018regret}{25}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Kappa kappa kappa\relax }}{8}\protected@file@percent }
+\newlabel{fig:kappa}{{5}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion and Future Work}{8}\protected@file@percent }
+\newlabel{sec:conclusion}{{VI}{8}}
 \@writefile{toc}{\contentsline {section}{References}{8}\protected@file@percent }
+\bibcite{diamond2016cvxpy}{24}
+\bibcite{andersen2000mosek}{25}

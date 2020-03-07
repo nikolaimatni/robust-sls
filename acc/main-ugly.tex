@@ -12,6 +12,7 @@
 %\usepackage{graphicx, amsmath,amsthm,amssymb,url}
 \usepackage{graphicx, amsmath,amssymb,url}
 \usepackage{cite}
+
 \usepackage[labelfont=bf]{subcaption}
 \usepackage[labelfont=bf]{caption}
 \usepackage{algorithm,algcompatible,mathtools}
@@ -35,7 +36,8 @@
 \newtoggle{draft}
 %\toggletrue{draft}
 \togglefalse{draft}
-
+\let\labelindent\relax
+\usepackage{enumitem}
 \newcommand{\todo}[1]{
 \iftoggle{draft}{
 \vspace{5 mm}\par \noindent \marginpar{\textsc{ToDo}}
@@ -216,7 +218,7 @@ We generalize the system level synthesis framework to systems defined by bounded
 
 \section{Experiments}
 \label{sec:experiments}
-Write me!
+\input{experiments}
 
 \section{Conclusion and Future Work}
 \label{sec:conclusion}
