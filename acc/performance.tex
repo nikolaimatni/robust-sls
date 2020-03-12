@@ -72,7 +72,11 @@ The necessary and sufficient conditions for robust stability of the resulting tw
 \end{aligned}
 \end{equation}
 
-Finally, we remark that although the constraints \eqref{eq:constraints} are in general infinite-dimensional due to the transfer matrix $\Phih$, principled finite-dimensional approximations, some of which enjoy provable sub-optimality guarantees, are available \cite{matni2017scalable,anderson2019system,dean2017sample}.  Further, for the $\mathcal{L}_1$ problem considered here, the resulting optimization problem is quasi-convex, and can be posed as a linear program (LP) for a fixed $\gamma$, thus enjoying favorable computational complexity properties.
+\begin{remark}
+The above results apply equally to the $\ell_1 \to \ell_1$ induced norm, as it is easily checked to equal the $\ell_\infty \to \ell_\infty$ induced norm of the transpose system (see \cite{matni2017scalable}).
+\end{remark}
+\begin{remark} Although the constraints \eqref{eq:constraints} are in general infinite-dimensional due to the transfer matrix $\Phih$, principled finite-dimensional approximations, some of which enjoy provable sub-optimality guarantees, are available \cite{matni2017scalable,anderson2019system,dean2017sample}.  Further, for the $\mathcal{L}_1$ problem considered here, the resulting optimization problem is quasi-convex, and can be posed as a linear program (LP) for a fixed $\gamma$, thus enjoying favorable computational complexity properties.
+\end{remark}
 %It then follows that by bisecting on $\gamma$, e.g., by using golden search, we can find a performance level $\gamma$, and corresponding system responses and controller, satisfying $\gamma \leq \gamma_\star + \epsilon$ in $O\log_2(1/\epsilon)$ iterations, for $\gamma_\star$ the smallest $\gamma$ such that the set defined by \eqref{eq:constraints} is non-empty.
 %Thus, an LTI controller $\K=\Phiuh\Phixh^{-1}$ is robustly stabilizing for system \eqref{eq:uncertain-dynamics} if and only if the operators $\left\{\Phixh,\Phiuh\right\}$ satisfy
 

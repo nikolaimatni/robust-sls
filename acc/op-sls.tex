@@ -18,7 +18,7 @@ For LTI systems \eqref{eq:lti-dynamics}, the System Level Synthesis (SLS) framew
 \begin{figure}
 \centering
 \includegraphics[width=.35\textwidth]{lti-interconnect}
-\caption{The proposed $\ell_\infty$-stabilizing (equivalently internally stabilizing) state-feedback controller structure defined by equations \eqref{eq:lti-realization}.}
+\caption{The proposed $\ell_\infty$-stabilizing state-feedback controller structure defined by equations \eqref{eq:lti-realization}.}
 \label{fig:lti-interconnect}
 \end{figure}
 
@@ -39,8 +39,8 @@ achievable by an internally stabilizing state-feedback controller $\tf K$.
 \item For any transfer matrices $\left\{\Phix, \Phiu\right\}$ satisfying the constraints \eqref{eq:lti-achievable}, the control signal computed via\footnote{We note that due to the affine constraints \eqref{eq:lti-achievable}, $z\Phix-I$ is strictly causal, and thus feedback loop between $\tf{\hat x}$ and $\tf{\hat w}$ is well posed.}
 \begin{equation}
 \begin{array}{rcl}
-\tf u &=& z\Phiu \tf{\hat w} \\
-\tf{\hat w} &=& \tf x - \tf{\hat x}, \, \hat{w}_0 = 0, \\ 
+\tf u &=& z\Phiu \tf{\hat w},\\
+ \tf{\hat w} &=& \tf x - \tf{\hat x}, \, \hat{w}_0 = 0, \\ 
 \tf{\hat x} &=& (z\Phix - I)\tf{\hat w}
 \end{array}
 \label{eq:lti-realization}
@@ -107,11 +107,11 @@ If $\A$ and $\B$ are LTI, and $\K$ is LTI, then so are $\{\Phix,\Phiu\}$, and al
 \begin{equation}
 \begin{bmatrix} I - \frac{1}{z}\A& -\frac{1}{z}\B \end{bmatrix} \begin{bmatrix} \Phix \\ \Phiu\end{bmatrix} = \frac{1}{z}I, \, \ \Phix, \Phiu \in \frac{1}{z}\RHinf,
 \end{equation}
-which can be viewed as a generalization of constraint \eqref{eq:lti-achievable} to LTI dynamics defined by dynamic operators $\A(z)$ and $\B(z)$.  Similarly, if $\A$ and $\B$ are memoryless and LTI, and $\K$ is LTI, then $\{\Phix,\Phiu\}$ are LTI, and constraint \eqref{eq:osls-achievable} simplifies to
-\begin{equation}
-\begin{bmatrix} I - \frac{1}{z}A & -\frac{1}{z}B \end{bmatrix} \begin{bmatrix} \Phix \\ \Phiu \end{bmatrix} = \frac{1}{z}I, \, \ \Phix, \Phiu \in \frac{1}{z}\RHinf,
-\end{equation}
-which is clearly equivalent to \eqref{eq:lti-achievable}.
+which can be viewed as a generalization of constraint \eqref{eq:lti-achievable} to LTI dynamics defined by dynamic operators $\A(z)$ and $\B(z)$.  Similarly, if $\A$ and $\B$ are memoryless and LTI, and $\K$ is LTI, then $\{\Phix,\Phiu\}$ are LTI, and constraint \eqref{eq:osls-achievable} simplifies to constraint \eqref{eq:lti-achievable}.
+%\begin{equation}
+%\begin{bmatrix} I - \frac{1}{z}A & -\frac{1}{z}B \end{bmatrix} \begin{bmatrix} \Phix \\ \Phiu \end{bmatrix} = \frac{1}{z}I, \, \ \Phix, \Phiu \in \frac{1}{z}\RHinf,
+%\end{equation}
+%which is clearly equivalent to .
 \end{remark}
 
 \subsection{Controller Implementation}
@@ -126,8 +126,8 @@ We now show how to construct an internally stabilizing controller from any stric
 Let $\left\{\Phix,\Phiu\right\}$ satisfy constraint \eqref{eq:osls-achievable}.  Then the controller implementation shown in Fig. \ref{fig:realization}, described by the equations
 \begin{equation}
 \begin{array}{rcl}
-\tf u &=& \Phiu \Sm \tf{\hat w}\\
-\tf{\hat w} & = & \x - \tf{\hat x}, \, \hat{w}_0 = 0, \\
+\tf u &=& \Phiu \Sm \tf{\hat w},\\
+ \tf{\hat w}  &=&  \x - \tf{\hat x}, \, \hat{w}_0 = 0, \\
 \tf{\hat x} &=& (\Phix\Sm-I)\tf{\hat w},
 \end{array}
 \label{eq:realization}
