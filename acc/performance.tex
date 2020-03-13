@@ -40,21 +40,21 @@ for $\tf C = \mathrm{blkdiag}(C,C,\dots)$ \& $\tf D = \mathrm{blkdiag}(D,D,\dots
 We can then pose the robust performance problem for a specified performance level $\gamma \geq 0$ as finding LTI operators $\{\Phixh,\Phiuh\}$ that satisfy 
 \begin{equation}\label{eq:robust-perf1}
 \begin{aligned}
-&{ \bignorm{\Q\Phih \left(I-\eps\Sp\D\Phih\right)^{-1} }_{\ell_\infty \to \ell_\infty}} \leq \gamma \\
+&{ \bignorm{\Q\Phih \left(I-\eps\D\Phih\right)^{-1} }_{\ell_\infty \to \ell_\infty}} \leq \gamma \\
 &Z_{AB}\Phih = I,\ \Phih \in \frac{1}{z}\RHinf, \\
-& \left(I-\eps\Sp\D\Phih\right)^{-1} \text{ is $\ell_\infty$-stable}
+& \left(I-\eps\D\Phih\right)^{-1} \text{ is $\ell_\infty$-stable}
 \end{aligned}
 \end{equation}
-for all $\D$ satisfying $\linffnorm{\D}\leq 1$, where we have combined equations  \eqref{eq:dhat-response}, \eqref{eq:z-output}, and \eqref{eq:notation} to derive the robust performance bound condition.  It then follows that the robust performance problem \eqref{eq:robust-perf1} is equivalent to finding an LTI operator $\Phih$ satisfying
+for all strictly causal $\D$ satisfying $\linffnorm{\D}\leq 1$, where we have combined equations  \eqref{eq:dhat-response}, \eqref{eq:z-output}, and \eqref{eq:notation} to derive the robust performance bound condition.  It then follows that the robust performance problem \eqref{eq:robust-perf1} is equivalent to finding an LTI operator $\Phih$ satisfying
 \begin{equation} \label{eq:robust-perf}
 \begin{aligned}
 & \linffnorm{\frac{1}{\gamma}\Q\Phih + \frac{1}{\gamma}\Q\Phih\D(I-(\eps\Phih)\D)^{-1}(\eps\Phih)} \leq 1 \\
 & Z_{AB}\Phih = I,\ \Phih \in \frac{1}{z}\RHinf,\   (I-\Phih\D)^{-1} \text{ is $\ell_\infty$-stable}\\
 \end{aligned}
 \end{equation}
-for all $\D$ satisfying $\linffnorm{\D}\leq 1$, where we have used that $(I-\Delta\Phih)^{-1} = I + \Delta(I-\Phih\Delta)^{-1}\Phih$ and that $(I-\tf{GH})^{-1}$ is $\ell_\infty$-stable if and only if $(I-\tf{HG})^{-1}$ is $\ell_\infty$-stable (see Proposition 1, \cite{khammash1990stability}) to recast the expression \eqref{eq:robust-perf1} in a form that matches the linear-fractional-transform (LFT) structure studied in \cite{khammash1990stability,dahleh1994control}.
+for all strictly causal $\D$ satisfying $\linffnorm{\D}\leq 1$, where we have used that $(I-\Delta\Phih)^{-1} = I + \Delta(I-\Phih\Delta)^{-1}\Phih$ and that $(I-\tf{GH})^{-1}$ is $\ell_\infty$-stable if and only if $(I-\tf{HG})^{-1}$ is $\ell_\infty$-stable (see Proposition 1, \cite{khammash1990stability}) to recast the expression \eqref{eq:robust-perf1} in a form that matches the linear-fractional-transform (LFT) structure studied in \cite{khammash1990stability,dahleh1994control}.
 
-We can therefore leverage the equivalence between robust stability and performance (see Theorem 5.1, \cite{khammash1990stability}) to conclude that $\Phih$ satisfies the robust performance conditions \eqref{eq:robust-perf} for all $\linffnorm{\D}\leq 1$ if and only if the augmented LTI system
+We can therefore leverage the equivalence between robust stability and performance (see Theorem 5.1, \cite{khammash1990stability}) to conclude that $\Phih$ satisfies the robust performance conditions \eqref{eq:robust-perf} for all $\linffnorm{\D}\leq 1$ if and only if the augmented LTI system\footnote{Note that we can relax the requirement that $\D$ be strictly causal because the nominal plant is LTI.}
 \begin{equation}
 \tf M = \begin{bmatrix} \frac{1}{\gamma}\Q\Phih & \frac{1}{\gamma}\Q\Phih \\ \eps\Phih & \eps\Phih \end{bmatrix}
 \label{eq:bigM}
