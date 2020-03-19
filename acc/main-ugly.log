@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  13 MAR 2020 11:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  19 MAR 2020 12:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -392,18 +392,18 @@ Package: enumitem 2019/02/04 v3.8 Customized lists
 (./main-ugly.aux)
 \openout1 = `main-ugly.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
 
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -441,12 +441,12 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 196.
+LaTeX Font Info:    Try loading font information for U+msa on input line 197.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 196.
+LaTeX Font Info:    Try loading font information for U+msb on input line 197.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -467,7 +467,10 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
-) (./notation.tex) (./op-sls.tex [2 <./well-posed.pdf>]
+) (./notation.tex) (./op-sls.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <./well-posed.pdf>]
 Underfull \hbox (badness 4229) in paragraph at lines 9--10
 []\OT1/ptm/m/n/10 Note that if $[]$ and $[]$ are mem-o-ry-less and
  []
@@ -477,7 +480,7 @@ Underfull \hbox (badness 2310) in paragraph at lines 9--10
 \OT1/ptm/m/n/10 time in-vari-ant, i.e., if their ma-trix rep-re-sen-ta-tions
  []
 
-<lti-interconnect.pdf, id=108, 489.83pt x 322.20375pt>
+<lti-interconnect.pdf, id=109, 489.83pt x 322.20375pt>
 File: lti-interconnect.pdf Graphic file (type pdf)
 <use lti-interconnect.pdf>
 Package pdftex.def Info: lti-interconnect.pdf  used on input line 20.
@@ -494,12 +497,12 @@ Underfull \hbox (badness 5133) in paragraph at lines 57--58
  []
 
 [3 <./lti-interconnect.pdf>]
-<simple-interconnect.pdf, id=260, 490.83376pt x 258.9675pt>
+<simple-interconnect.pdf, id=263, 490.83376pt x 258.9675pt>
 File: simple-interconnect.pdf Graphic file (type pdf)
 <use simple-interconnect.pdf>
 Package pdftex.def Info: simple-interconnect.pdf  used on input line 75.
 (pdftex.def)             Requested size: 164.41711pt x 86.74773pt.
-<interconnect.pdf, id=261, 492.84125pt x 334.24875pt>
+<interconnect.pdf, id=264, 492.84125pt x 334.24875pt>
 File: interconnect.pdf Graphic file (type pdf)
 <use interconnect.pdf>
 Package pdftex.def Info: interconnect.pdf  used on input line 120.
@@ -515,18 +518,22 @@ Underfull \hbox (badness 6078) in paragraph at lines 6--8
 T1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 and $[][] \OT1/cmr/m/n/10 =
  []
 
-[5]) (./extensions.tex
+
+Underfull \vbox (badness 2158) has occurred while \output is active []
+
+ [5]
+[6]) (./extensions.tex
 Underfull \hbox (badness 1394) in paragraph at lines 4--4
  \OT1/ptm/m/it/10 A. Ro-bust Per-for-mance Guar-an-tees for Large-Scale
  []
 
-[6]) (./experiments.tex [7]
-<d2.png, id=521, 361.35pt x 361.35pt>
+) (./experiments.tex [7]
+<d2.png, id=526, 361.35pt x 361.35pt>
 File: d2.png Graphic file (type png)
 <use d2.png>
 Package pdftex.def Info: d2.png  used on input line 20.
 (pdftex.def)             Requested size: 102.44208pt x 102.43996pt.
-<d5.png, id=523, 361.35pt x 361.35pt>
+<d5.png, id=528, 361.35pt x 361.35pt>
 File: d5.png Graphic file (type png)
 <use d5.png>
 Package pdftex.def Info: d5.png  used on input line 20.
@@ -537,7 +544,7 @@ Underfull \hbox (badness 1436) in paragraph at lines 62--65
  arXiv:1907.06256\OT1/ptm/m/n/8 ,
  []
 
-)
+[8 <./d2.png> <./d5.png>])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -549,48 +556,55 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the US letter (8.5in X 11in) paper size.
 
-[8 <./d2.png> <./d5.png>] (./main-ugly.aux) ) 
+[9
+
+] (./main-ugly.aux) ) 
 Here is how much of TeX's memory you used:
- 6497 strings out of 492616
- 98512 string characters out of 6129482
- 193334 words of memory out of 5000000
- 10260 multiletter control sequences out of 15000+600000
- 48969 words of font info for 109 fonts, out of 8000000 for 9000
+ 6501 strings out of 492616
+ 98534 string characters out of 6129482
+ 194423 words of memory out of 5000000
+ 10261 multiletter control sequences out of 15000+600000
+ 49861 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,19n,40p,1837b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dis
-t/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/
-amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmib10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfon
-ts/cmextra/cmmib7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/am
-sfonts/cmextra/cmmib8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.
-pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
-m10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
-usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local
-/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main-ugly.pdf (8 pages, 1459088 bytes).
+ 42i,19n,40p,1837b,361s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8
+r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10
+.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.p
+fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
+></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
+/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb
+></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
+usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loca
+l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/loca
+l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb></usr/
+local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></
+usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pf
+b></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib
+9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
+></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
+usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
+/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/lo
+cal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
+al/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local
+/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/t
+exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
+live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
+ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
+/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/tex
+live/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/
+texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2019/texmf-dis
+t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/ty
+pe1/urw/times/utmri8a.pfb>
+Output written on main-ugly.pdf (9 pages, 1503635 bytes).
 PDF statistics:
- 611 PDF objects out of 1000 (max. 8388607)
- 487 compressed objects within 5 object streams
+ 635 PDF objects out of 1000 (max. 8388607)
+ 504 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
