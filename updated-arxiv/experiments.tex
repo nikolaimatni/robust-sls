@@ -3,8 +3,7 @@ All code needed to reproduce examples in this section can be found at \url{https
 \begin{equation}\label{eq:chain}
 \begin{array}{rcl}
 x^1_{t+1} &=& \rho\left[(1-\alpha)x^1_t + \alpha x^2_t\right] + u^1_t\\
-x^i_{t+1} &=& \rho\left[\alpha x^{i-1}_t + (1-2\alpha)x^i_t + \alpha x^{i+1}_t\right] + u^i_t,\\
-&& \text{ for $i=2,\dots,N-1$,} \\
+x^i_{t+1} &=& \rho\left[\alpha x^{i-1}_t + (1-2\alpha)x^i_t + \alpha x^{i+1}_t\right] + u^i_t,\, \text{ for $i=2,\dots,N-1$,} \\
  x^N_{t+1} &=& \rho\left[\alpha x^{N-1}_t + (1-\alpha)x^N_t\right] + u^N_t
  \end{array}
 \end{equation}
@@ -17,7 +16,8 @@ By bisecting on $\gamma$, we determine that the optimal robust performance level
 To empirically test this conjecture, we examine the evolution of the closed loop norm of the nominal and robust controllers to perturbations of the form $\DA = \mathrm{blkdiag}(\kappa I, \kappa I, \dots)$ and $\DB = 0$, for $\kappa \in [0,\epsilon]$, for varying locality parameters $d\in\{2,5,10\}$, where $d=10$ corresponds to the centralized setting.  The results are displayed in Fig \ref{fig:kappa}.  We show only the results for $d=2$ and $d=5$, as the result for $d=5$ and $d=10$ are indistinguishable -- as can be observed, in the ``extremely'' localized setting of $d=2$, the degrees of freedom are limited such that robust and nominal control behave similarly; in contrast, when $d=5$, the robust controller enjoys improved performance for larger values of $\kappa$, at the expense of degraded performance at lower values.  Our approach therefore allows for a principled exploration of tradeoffs between synthesis/implementation complexity (as measured by $d$), nominal performance, and robust performance for large-scale distributed systems.
 
 \begin{figure}
-\includegraphics[width=.45\columnwidth]{d2.png}~\includegraphics[width=.45\columnwidth]{d5.png}
+\centering
+\includegraphics[width=.45\columnwidth]{d2.png}~~~~~\includegraphics[width=.45\columnwidth]{d5.png}
 \caption{Performance of a robust controller and a nominally optimal controller for for two decentralized chains, with disturbances  $\DA = \mathrm{blkdiag}(\kappa I, \kappa I, \dots)$. As $\kappa$ increases to $\epsilon = 0.55$, performance of the robust controller meets the robust performance bound $\gamma$ \eqref{eq:constraints}.}
 \label{fig:kappa}
 \end{figure}
