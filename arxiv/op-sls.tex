@@ -13,7 +13,7 @@ x_{t+1} = A x_t + Bu_t + w_t, \, x_0 = 0,
 \end{equation}
 where once again stability of the open-loop system is determined by the stability of the operator $(zI-A)^{-1}$ as opposed to the boundedness of the matrix $A$.
 
-For LTI systems \eqref{eq:lti-dynamics}, the System Level Synthesis (SLS) framework \cite{wang2019system,anderson2019system} provides an appealing parameterization of all closed loop responses from $\tf w \to (\tf x, \tf u)$ achievable by a causal state-feedback $\ell_\infty$-stabilizing (equivalently internally stabilizing) LTI control law $\tf K$ such that $\tf u = \tf K \tf x$, as summarized in the following theorem.  We remind the reader that a controller $\tf K$ is $\ell_\infty$-stabilizing (equivalently internally stabilizing) if its interconnection with the system dynamics, as illustrated in Fig. \ref{fig:lti-interconnect}, defines an $\ell_\infty$-stable map from $(\tf w, \tf \delta_y, \tf \delta_u) \to (\tf x, \tf u, \what)$ (see III.A of \cite{wang2019system} ).
+For LTI systems \eqref{eq:lti-dynamics}, the System Level Synthesis (SLS) framework \cite{wang2019system,anderson2019system} provides an appealing parameterization of all closed loop responses from $\tf w \to (\tf x, \tf u)$ achievable by a causal state-feedback $\ell_\infty$-stabilizing (equivalently internally stabilizing) LTI control law $\tf K$ such that $\tf u = \tf K \tf x$, as summarized in the following theorem.  We remind the reader that a controller $\tf K$ is $\ell_\infty$-stabilizing (equivalently internally stabilizing) if its interconnection with the system dynamics, as illustrated in Fig. \ref{fig:lti-interconnect}, defines an $\ell_\infty$-stable map from $(\tf w, \tf \delta_y, \tf \delta_u) \to (\tf x, \tf u, \what)$ (see III.A of \cite{wang2019system}).
 
 \begin{figure}
 \centering
@@ -39,8 +39,8 @@ achievable by an internally stabilizing state-feedback controller $\tf K$.
 \item For any transfer matrices $\left\{\Phix, \Phiu\right\}$ satisfying the constraints \eqref{eq:lti-achievable}, the control signal computed via\footnote{We note that due to the affine constraints \eqref{eq:lti-achievable}, $z\Phix-I$ is strictly causal, and thus feedback loop between $\tf{\hat x}$ and $\tf{\hat w}$ is well posed.}
 \begin{equation}
 \begin{array}{rcl}
-\tf u &=& z\Phiu \tf{\hat w} \\
-\tf{\hat w} &=& \tf x - \tf{\hat x}, \, \hat{w}_0 = 0, \\ 
+\tf u &=& z\Phiu \tf{\hat w},\\
+ \tf{\hat w} &=& \tf x - \tf{\hat x}, \, \hat{w}_0 = 0, \\ 
 \tf{\hat x} &=& (z\Phix - I)\tf{\hat w}
 \end{array}
 \label{eq:lti-realization}
@@ -51,7 +51,7 @@ defines the control law $\uu = \Phiu\Phix^{-1}\x$, is internally stabilizing, an
 
 Thus, in the case of LTI systems \eqref{eq:lti-dynamics}, the search for an optimal controller $\tf K$ can be converted to a search over system responses $\left\{\Phix,\Phiu\right\}$ constrained to lie in the affine space defined by equation \eqref{eq:lti-achievable}.  This fact, combined with the transparent mapping between the system responses and the corresponding controller implementation \eqref{eq:lti-realization}, has been successfully exploited for the synthesis of distributed optimal controllers for large-scale systems by imposing additional convex structural constraints, such as delay, sparsity, and locality subspace constriants, on the system responses and corresponding controller implementation \eqref{eq:lti-realization} -- we refer the reader to \cite{wang2014localized,wang2016localized,wang2018separable} for more details.
 
-Another favorable feature of the parameterization defined in Theorem \ref{thm:lti-sls} is that it is provably stable under deviations from the subspace \eqref{eq:lti-achievable}, as summarized in the following theorem from \cite{matni2017scalable}.
+Another favorable feature of the parameterization defined in Theorem \ref{thm:lti-sls} is that it is provably stable under perturbations from the subspace \eqref{eq:lti-achievable}, as summarized in the following theorem from \cite{matni2017scalable}.
 
 \begin{theorem}[Theorem 2, \cite{matni2017scalable}]\label{thm:lti-robust}
 Let $(\Phixh,\Phiuh,\D)$ be a solution to
@@ -65,7 +65,7 @@ If $(I-\D)^{-1}$ exists as an operator from $\ell^n_{\infty,e} \to \ell^n_{\inft
 \end{equation}
 on the LTI system \eqref{eq:lti-dynamics}, and is internally stabilizing if and only if $(I-\D)^{-1} \in \RHinf$.
 \end{theorem}
-This parameterization has proved crucial in providing tractable approximations to non-convex distributed control problems \cite{matni2017scalable}, and in providing sub-optimality bounds for robust controllers as applied to learned systems \cite{dean2017sample,dean2019safely}.  However, in these past works, very crude approximations based solely on small gain bounds and triangle inequalities were used to control the effects of the uncertain map $(I-\D)^{-1}$ on system stability and performance.  In this work we show that Theorems \ref{thm:lti-sls} and \ref{thm:lti-robust} can be extended to a more general setting that allows connections to well developed tools from the robust control literature \cite{khammash1990stability,dahleh1994control}.  Although we focus on $\mathcal{L}_1$ optimal control in this paper due to its favorable separability structure (cf. \S \ref{sec:extensions}), we expect these results to carry over naturally to the $\mathcal{H}_\infty$ setting.
+This parameterization has proved crucial in providing tractable approximations to non-convex distributed control problems \cite{matni2017scalable}, and in providing sub-optimality bounds for robust controllers as applied to learned systems \cite{dean2017sample}.  However, in these past works, very crude approximations based solely on small gain bounds and triangle inequalities were used to control the effects of the uncertain map $(I-\D)^{-1}$ on system stability and performance.  In this work we show that Theorems \ref{thm:lti-sls} and \ref{thm:lti-robust} can be extended to a more general setting that allows connections to well developed tools from the robust control literature \cite{khammash1990stability,dahleh1994control}.  Although we focus on $\mathcal{L}_1$ optimal control in this paper due to its favorable separability structure (see \S \ref{sec:extensions}), we expect these results to carry over naturally to the $\mathcal{H}_\infty$ setting.
 
 \subsection{Necessary Conditions}
 Here we characterize a set of affine constraints that the closed loop system responses of system \eqref{eq:dynamics} must satisfy if they are induced by a linear, causal, and $\ell_\infty$-stabilizing controller $\tf K : \ell^n_{\infty,e} \to \ell^p_{\infty,e}$ via the control law $\tf u = \tf K \tf x$.  In particular, a controller $\tf K$ is $\ell_\infty$-stabilizing if the interconnection illustrated in Fig. \ref{fig:simple-interconnect} is $\ell_\infty$-stable as a map from $(\tf w, \tf \delta_y, \tf \delta_u)\to (\x,\uu,\tf \beta)$, where $\tf \beta$ is any signal internal to the controller $\tf K$.
@@ -103,15 +103,15 @@ Defining
 it is easily verified that $\left\{\Phix,\Phiu\right\}$ satisfy constraint \eqref{eq:osls-achievable}.
 \end{proof}
 \begin{remark}
-If $\A$ and $\B$ are LTI, and $\K$ is LTI, then so are $\{\Phix,\Phiu\}$, and all are uniquely characterized by their $z$-transforms.  Further the right shift operator $\Sp$, when restricted to $\LTI$, can be written as $\Sp=1/z$.  In this case, constraint \eqref{eq:osls-achievable} simplifies to
+If $\A$ and $\B$ are LTI, and $\K$ is LTI, then so are $\{\Phix,\Phiu\}$, and all are uniquely characterized by their $z$-transforms.  Further the right shift operator $\Sp$, when restricted to $\LTI$, can be written as $\Sp=\frac{1}{z}I$.  In this case, constraint \eqref{eq:osls-achievable} simplifies to
 \begin{equation}
 \begin{bmatrix} I - \frac{1}{z}\A& -\frac{1}{z}\B \end{bmatrix} \begin{bmatrix} \Phix \\ \Phiu\end{bmatrix} = \frac{1}{z}I, \, \ \Phix, \Phiu \in \frac{1}{z}\RHinf,
 \end{equation}
-which can be viewed as a generalization of constraint \eqref{eq:lti-achievable} to LTI dynamics defined by dynamic operators $\A(z)$ and $\B(z)$.  Similarly, if $\A$ and $\B$ are memoryless and LTI, and $\K$ is LTI, then $\{\Phix,\Phiu\}$ are LTI, and constraint \eqref{eq:osls-achievable} simplifies to
-\begin{equation}
-\begin{bmatrix} I - \frac{1}{z}A & -\frac{1}{z}B \end{bmatrix} \begin{bmatrix} \Phix \\ \Phiu \end{bmatrix} = \frac{1}{z}I, \, \ \Phix, \Phiu \in \frac{1}{z}\RHinf,
-\end{equation}
-which is clearly equivalent to \eqref{eq:lti-achievable}.
+which can be viewed as a generalization of constraint \eqref{eq:lti-achievable} to LTI dynamics defined by dynamic operators $\A(z)$ and $\B(z)$.  Similarly, if $\A$ and $\B$ are memoryless and LTI, and $\K$ is LTI, then $\{\Phix,\Phiu\}$ are LTI, and constraint \eqref{eq:osls-achievable} simplifies to constraint \eqref{eq:lti-achievable}.
+%\begin{equation}
+%\begin{bmatrix} I - \frac{1}{z}A & -\frac{1}{z}B \end{bmatrix} \begin{bmatrix} \Phix \\ \Phiu \end{bmatrix} = \frac{1}{z}I, \, \ \Phix, \Phiu \in \frac{1}{z}\RHinf,
+%\end{equation}
+%which is clearly equivalent to .
 \end{remark}
 
 \subsection{Controller Implementation}
@@ -126,8 +126,8 @@ We now show how to construct an internally stabilizing controller from any stric
 Let $\left\{\Phix,\Phiu\right\}$ satisfy constraint \eqref{eq:osls-achievable}.  Then the controller implementation shown in Fig. \ref{fig:realization}, described by the equations
 \begin{equation}
 \begin{array}{rcl}
-\tf u &=& \Phix \Sm \tf{\hat w}\\
-\tf{\hat w} & = & \x - \tf{\hat x}, \, \hat{w}_0 = 0, \\
+\tf u &=& \Phiu \Sm \tf{\hat w},\\
+ \tf{\hat w}  &=&  \x - \tf{\hat x}, \, \hat{w}_0 = 0, \\
 \tf{\hat x} &=& (\Phix\Sm-I)\tf{\hat w},
 \end{array}
 \label{eq:realization}
@@ -162,11 +162,11 @@ By assumption, $\Phix$, $\Phiu$, $\A$, and $\B$ are all $\ell_\infty$-stable, an
 \end{proof}
 
 \begin{remark}
-If $\A$ and $\B$ are memoryless and LTI, and $\K$ is LTI, then so are the system responses $\left\{\Phix,\Phiu\right\}$, and consequently the right and left shift operators $\Sp$ and $\Sm$ become $\frac{1}{z}$ and $z$, respectively, recovering the controller implementation \eqref{eq:lti-realization}.
+If $\A$ and $\B$ are memoryless and LTI, and $\K$ is LTI, then so are the system responses $\left\{\Phix,\Phiu\right\}$, and consequently the right and left shift operators $\Sp$ and $\Sm$ become $\frac{1}{z}I$ and $zI$, respectively, recovering the controller implementation \eqref{eq:lti-realization}.
 \end{remark}
 
 \subsection{Robust Operator System Level Synthesis}
-Thus Propositions \ref{prop:necessity} and \ref{prop:sufficiency} show that the parameterization of Theorem \ref{thm:lti-sls} can be extended to a class of dynamics described by bounded and causal linear operators in feedback with a causal linear controller.  We now show that this extension enjoys similar stability properties with respect to perturbations from the subspace \eqref{eq:osls-achievable}.
+Propositions \ref{prop:necessity} and \ref{prop:sufficiency} show that the parameterization of Theorem \ref{thm:lti-sls} can be extended to a class of dynamics described by bounded and causal linear operators in feedback with a causal linear controller.  We now show that this extension enjoys similar stability properties with respect to perturbations from the subspace \eqref{eq:osls-achievable}.
 
 \begin{theorem}\label{thm:robust-sls}
 Let $\A\in\LTV^{n,n}$ and $\B\in\LTV^{n,p}$, and suppose that $\left\{\Phixh,\Phiuh\right\}$ satisfy
